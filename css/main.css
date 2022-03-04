@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Piedra&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&family=Piedra&display=swap');
+
+body {
+    /*margin: 1.5em;*/
+    font-family: 'ABeeZee';
+}
+
+h1 {
+    font-family: 'Piedra';
+    font-size: 4rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+
+.hero-class {
+    margin-top: 1em;
+    margin-left: 1em;
+}
+
+.hero-title {
+    font-family: 'Piedra';
+    font-size: 4rem;
+    color: black;
+}
+
+.hero-logo {
+    display:inline-block;
+    vertical-align: bottom;
+    height: 6em;
+    width: 6em;
+}
+
+nav {
+    margin-top: 1em;
+    margin-right: 2em;
+}
+
+nav ul {
+    display: flex;
+    gap: 3.5rem;
+    list-style-type: none; 
+    padding: 0;
+}
+
+nav a {
+    color: black;
+    font-weight: bold;
+    display: block;
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+.slide-categories {
+    background-color: grey;
+}
