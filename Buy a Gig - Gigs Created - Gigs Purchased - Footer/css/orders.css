@@ -1,0 +1,31 @@
+.gigs-table{
+	border-collapse: collapse;
+	width: 100%;
+	background-color: white;
+	border: 1px solid #E5E5E5;
+}
+.gigs-table th, .gigs-table td{
+	border-top: 1px solid #E5E5E5;
+	padding: 20px;
+	vertical-align: center;
+}
+.tables-links a{
+	color: black;
+	margin: 10px;
+}
+
+.status{
+	color: black;
+	padding: 5px;
+	background-color: #1DBF73;
+	border-radius: 5px;
+	float: right;
+}
+
+.status-disabled{
+	color: black;
+	padding: 5px;
+	background-color: #DDDDDD;
+	border-radius: 5px;
+	float: right;
+}

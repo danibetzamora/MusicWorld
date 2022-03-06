@@ -1,0 +1,65 @@
+.gig-navbar{
+	border-bottom: 1px solid #ddd;
+}
+.gig-navbar-link{
+	text-decoration: none;
+	color: initial;
+	margin: 0 50px;
+}
+.gig-navbar-link:hover{
+	color: initial;
+	font-weight: bold;
+}
+.gig-contact-form{
+	border: 1px solid #ddd;
+	margin: 130px 20px;
+	padding: 10px;
+	background-color: white;
+}
+.gig-contact-form input, .gig-contact-form textarea, .gig-contact-form button, .gig-contact-form p{
+	width: 100%;
+	margin-bottom: 15px;
+	padding: 5px;
+}
+.gig-contact-form input, .gig-contact-form textarea, .gig-contact-form button{
+	border-radius: 5px;
+	border: 1px solid #ddd;
+}
+.gig-contact-form button{
+	padding: 5px;
+	border: none;
+	background-color: #211DBF;
+	color: white;
+}
+
+.static-gig{
+	z-index: 10;
+	position: fixed;
+	right: 5%;
+	top: 20px;
+}
+
+.seller-info-box{
+	border: 1px solid #ddd;
+	padding: 10px;
+}
+
+.recommended{
+	border: 1px solid #ddd;
+	background-color: #eee;
+	padding: 10px;
+}
+
+.gig-item{
+	display: inline-block;
+	width: 39%;
+	margin: 5%;
+}
+
+.review-bar{
+	height: 8px;
+    display: inline-block;
+    width: 400px;
+    background-color: lightgrey;
+    border-radius: 8px;
+}

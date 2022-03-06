@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<link rel="stylesheet" href="css/app.css">
+	<link rel="stylesheet" href="css/footer.css">
+	<link rel="stylesheet" href="css/orders.css">
+</head>
+<body>
+	<nav>
+	    <div class="main-title-class">
+	        <a href="#" class="main-title">Music World</a>
+	        <img src="assets/Music World Logo Blue.svg" alt="MWLogo" class="main-logo">
+	    </div>
+	    
+	    <div class="search-container">
+	        <span class="material-icons">search</span>
+	        
+	        <input type="text" class="search">
+	       
+	        <div class="search-btn">
+	           <button>Search</button>
+	       </div>
+	    </div>
+
+	    <div class="navigation">
+	        <a href="">Messages</a>
+	        <a href="">MisGigs</a>
+	        <a href="">Orders</a>
+	        <a href="">Create a Gig</a> 
+	    </div>
+	    
+	    <img src="assets/user-icon.png" alt="User Icon" class="user-icon">
+	</nav>
+
+	<div class="wrapper">
+
+		<div style="width: 100%; padding: 20px 10%; background-color: #F7F7F7;">
+			
+			<div class="margin">
+				<h1>Manage orders</h1>
+			</div>
+
+			<div class="margin tables-links">
+				<a href="#">Active</a>
+				<a href="#">Missing details</a>
+				<a href="#">Awaiting my review</a>
+				<a href="#">Delivered</a>
+				<a href="#">Completed</a>
+				<a href="#">Cancelled</a>
+				<a href="#">All</a>
+			</div>
+
+			<div class="margin">
+				<table class="gigs-table">
+					<thead>
+						<tr>
+							<th></th>
+							<th style="width: 13%;">Order Date</th>
+							<th style="width: 13%;">Due on</th>
+							<th style="width: 13%;">Total</th>
+							<th style="width: 13%;">Status</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td style="display: flex;">
+								<img src="assets/placeholder.png" alt="Gig image" style="width: 10%;">
+								<div style="margin: 15px; display: inline-block;">be your personal swimming coach and analyst</div>
+							</td>
+							<td>07 Feb 2022</td>
+							<td>10 Feb 2022</td>
+							<td>€11.52</td>
+							<td>
+								<a href="#" class="status">Order again</a>
+							</td>
+						</tr>
+
+						<tr>
+							<td style="display: flex;">
+								<img src="assets/placeholder.png" alt="Gig image" style="width: 10%;">
+								<div style="margin: 15px; display: inline-block;">do photoshop editing, graphic designing job professionally</div>
+							</td>
+							<td>08 Jan 2022</td>
+							<td>09 Jan 2022</td>
+							<td>€16.47</td>
+							<td>
+								<a href="javascript:void(0);" class="status-disabled">Order again</a>
+							</td>
+						</tr>
+
+						<tr>
+							<td style="display: flex;">
+								<img src="assets/placeholder.png" alt="Gig image" style="width: 10%;">
+								<div style="margin: 15px; display: inline-block;">setup google analytics and track shopify store or wordpress website</div>
+							</td>
+							<td>31 Dec 2021</td>
+							<td>01 Jan 2022</td>
+							<td>€53.82</td>
+							<td>
+								<a href="#" class="status">Order again</a>
+							</td>
+						</tr>
+
+						<tr>
+							<td style="display: flex;">
+								<img src="assets/placeholder.png" alt="Gig image" style="width: 10%;">
+								<div style="margin: 15px; display: inline-block;">do themeforest wordpress theme installation and demo set up</div>
+							</td>
+							<td>25 Dec 2021</td>
+							<td>26 Dec 2022</td>
+							<td>€16.53</td>
+							<td>
+								<a href="#" class="status">Order again</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+		</div>
+
+		<div class="footer">
+			<div class="display-flex" style="margin-top: 25px;">
+				<div class="width-15" style="margin-left: 20%;">
+					<ul class="footer-list">
+						<li class="footer-list-item footer-list-header">Categories</li>
+						<a href="/category/1"><li class="footer-list-item">Instrument Lessons</li></a>
+						<a href="/category/2"><li class="footer-list-item">Record Soundtrack</li></a>
+						<a href="/category/3"><li class="footer-list-item">Music Transcriptions</li></a>
+						<a href="/category/4"><li class="footer-list-item">Musical video</li></a>
+						<a href="/category/5"><li class="footer-list-item">DJ Mixing</li></a>
+						<a href="/category/6"><li class="footer-list-item">Beat Making</li></a>
+					</ul>
+				</div>
+				<div class="width-30">
+					<div class="footer-logos" style="margin: auto;">
+						<a href="/"><img src="assets/logo.png" style="max-width: 200px;" alt="Music World - Logo"></a>
+						<a href="/"><img src="assets/logo-text.png" style="max-width: 200px;" alt="Music World - Logo text"></a>
+					</div>
+				</div>
+				<div class="width-15">
+					<ul class="footer-list">
+						<li class="footer-list-item footer-list-header">About</li>
+						<a href="/#general-information"><li class="footer-list-item">General information</li></a>
+						<a href="/#about-us"><li class="footer-list-item">About us</li></a>
+						<a href="/#reviews"><li class="footer-list-item">Reviews & Comments</li></a>
+						<a href="/privacy-policy"><li class="footer-list-item">Privacy Policy</li></a>
+						<a href="/terms-of-service"><li class="footer-list-item">Terms of Service</li></a>
+					</ul>
+				</div>
+			</div>
+
+			<div class="display-flex" style="margin-top: 25px;">
+				<div class="width-50 display-flex">
+					<div class="footer-logo" style="max-width: fit-content;">
+						<a href="/"><<img src="assets/logo-text.png" style="max-width: 200px;" alt="Music World - Logo text"></a>
+					</div>
+					<div class="footer-rights" style="height: 100%; padding: 15px 5px;">
+						Music World 2022 | All rights reserved
+					</div>
+				</div>
+				<div class="width-50">
+					<div class="float-right">
+						<ul class="footer-inline-list">
+							<li class="footer-inline-list-item">
+								<a href="">
+									<img src="assets/social/linkedin.png" class="social-logo" alt="Linkedin">
+								</a>
+							</li>
+							<li class="footer-inline-list-item">
+								<a href="">
+									<img src="assets/social/instagram.png" class="social-logo" alt="Instagram">
+								</a>
+							</li>
+							<li class="footer-inline-list-item">
+								<a href="">
+									<img src="assets/social/facebook.png" class="social-logo" alt="Facebook">
+								</a>
+							</li>
+							<li class="footer-inline-list-item">
+								<a href="">
+									<img src="assets/social/twitter.png" class="social-logo" alt="Twitter">
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
