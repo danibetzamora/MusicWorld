@@ -23,6 +23,11 @@ a {
     color: rgb(121, 121, 121);
 }
 
+p{
+    overflow-wrap: break-word;
+    white-space: break-spaces;
+}
+
 .main-title {
     font-family: 'Piedra';
     font-size: 3rem;
@@ -141,4 +146,12 @@ a{
 
 .display-inline-block{
 	display: inline-block;
+}
+
+.text-left{
+    text-align: left;
+}
+
+.white-space-nowrap{
+    white-space: nowrap;
 }
