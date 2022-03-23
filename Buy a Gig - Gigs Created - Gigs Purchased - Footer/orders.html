@@ -46,13 +46,13 @@
 			</div>
 
 			<div class="margin tables-links">
-				<a href="#" class="table-link">Active</a>
-				<a href="#" class="table-link">Missing details</a>
-				<a href="#" class="table-link">Awaiting my review</a>
-				<a href="#" class="table-link">Delivered</a>
-				<a href="#" class="table-link">Completed</a>
-				<a href="#" class="table-link">Cancelled</a>
-				<a href="#" class="table-link">All</a>
+				<a href="?status=active" class="table-link">Active</a>
+				<a href="?status=missing" class="table-link">Missing details</a>
+				<a href="?status=awaiting" class="table-link">Awaiting my review</a>
+				<a href="?status=delivered" class="table-link">Delivered</a>
+				<a href="?status=completed" class="table-link">Completed</a>
+				<a href="?status=cancelled" class="table-link">Cancelled</a>
+				<a href="?" class="table-link">All</a>
 			</div>
 
 			<div class="margin responsive-table">
@@ -67,7 +67,7 @@
 							<th style="width: 13%;">Status</th>
 						</tr>
 					</thead>
-					<tbody>
+					<tbody id="table-body">
 						<tr>
 							<td class="table-image-wrapper">
 								<img src="assets/placeholder.png" alt="Gig image" class="table-image">
@@ -195,4 +195,57 @@
 		</div>
 	</div>
 </body>
+
+<script src="js/jquery-3.6.0.min.js"></script>
+<script>
+
+	function buildImageColumn(image){
+		return 	'<td class="table-image-wrapper">' +
+				'<img src="' + image + '" alt="Gig image" class="table-image">' +
+				'</td>';
+	}
+
+	function buildStatusColumn(value){
+		let disabled = value == 'active';
+
+		return 	'<td>' +
+				'<a ' + 
+				(disabled ? 'href="javascript:void(0);" class="status-disabled"' : 'href="#" class="status"') +
+				'>Order again</a>' +
+				'</td>';
+	}
+
+	function buildColumn(value){
+		return 	'<td>' +
+				value +
+				'</td>';
+	}
+
+	function buildRow(data){
+		return 	'<tr id="' + data.id + '">' +
+				buildImageColumn(data.image) +
+				buildColumn(data.name) +
+				buildColumn(data.order_date) +
+				buildColumn(data.due_on) +
+				buildColumn(data.total) +
+				buildStatusColumn(data.status) +
+				'</tr>';
+	}
+
+	function checkStatus(order){
+		let status = ( new URLSearchParams(window.location.search) ).get('status');
+
+		return status == null || status == order.status;
+	}
+
+	$(function () {
+		$.getJSON( "https://623af9f6f8827fbe47ac3209.mockapi.io/orders", function( data ) {
+			let table = $('#table-body');
+
+			table.empty();
+
+		  	$.each( data, ( key, order ) => checkStatus(order) ? table.append(buildRow(order)) : void(0) );
+		});
+	});
+</script>
 </html>

@@ -46,12 +46,13 @@
 			</div>
 
 			<div class="margin tables-links" style="margin: 40px 0;">
-				<a href="#" class="table-link">Active</a>
-				<a href="#" class="table-link">Pending approval</a>
-				<a href="#" class="table-link">Requires modification</a>
-				<a href="#" class="table-link">Draft</a>
-				<a href="#" class="table-link">Denied</a>
-				<a href="#" class="table-link">Paused</a>
+				<a href="?status=active" class="table-link">Active</a>
+				<a href="?status=pending" class="table-link">Pending approval</a>
+				<a href="?status=modification" class="table-link">Requires modification</a>
+				<a href="?status=draft" class="table-link">Draft</a>
+				<a href="?status=denied" class="table-link">Denied</a>
+				<a href="?status=paused" class="table-link">Paused</a>
+				<a href="?" class="table-link">All</a>
 				<div class="float-right-resp" style="padding: 10px;">
 					<a href="#" class="create-gig">Create new gig</a>
 				</div>
@@ -70,18 +71,7 @@
 							<th>Actions</th>
 						</tr>
 					</thead>
-					<tbody>
-						<tr>
-							<td class="table-image-wrapper">
-								<img src="assets/placeholder.png" alt="Gig image" class="table-image">
-							</td>
-							<td>I will give you a piano lesson</td>
-							<td>164</td>
-							<td>5</td>
-							<td>0</td>
-							<td>0 %</td>
-							<td></td>
-						</tr>
+					<tbody id="table-body">
 					</tbody>
 				</table>
 			</div>
@@ -158,4 +148,48 @@
 		</div>
 	</div>
 </body>
+
+<script src="js/jquery-3.6.0.min.js"></script>
+<script>
+
+	function buildImageColumn(image, text){
+		return 	'<td class="table-image-wrapper">' +
+				'<img src="' + image + '" alt="Gig image" class="table-image">' +
+				'</td>';
+	}
+
+	function buildColumn(value){
+		return 	'<td>' +
+				value +
+				'</td>';
+	}
+
+	function buildRow(data){
+		return 	'<tr id="' + data.id + '">' +
+				buildImageColumn(data.image) +
+				buildColumn(data.name) +
+				buildColumn(data.impressions) +
+				buildColumn(data.clicks) +
+				buildColumn(data.orders) +
+				buildColumn(data.cancellations) +
+				buildColumn('') +
+				'</tr>';
+	}
+
+	function checkStatus(gig){
+		let status = ( new URLSearchParams(window.location.search) ).get('status');
+
+		return status == null || status == gig.status;
+	}
+
+	$(function () {
+		$.getJSON( "https://623af9f6f8827fbe47ac3209.mockapi.io/gigs", function( data ) {
+			let table = $('#table-body');
+
+			table.empty();
+
+		  	$.each( data, ( key, gig ) => checkStatus(gig) ? table.append(buildRow(gig)) : void(0) );
+		});
+	});
+</script>
 </html>

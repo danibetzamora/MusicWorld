@@ -56,26 +56,26 @@
 				<div class="display-flex">
 					<div class="col-2-50" style="margin: 0 10%;">
 						<div class="margin">
-							<a href="#">Current category</a> <b>></b> <a href="#">Current gig</a>
+							<a href="#" class="gig-category">Current category</a> <b>></b> <a href="#" class="gig-name">Current gig</a>
 						</div>
 
 						<div class="margin" id="overview">
-							<h2>I will make anime background music just for you</h4>
+							<h2 class="gig-name">I will make anime background music just for you</h4>
 						</div>
 
 						<div class="margin text-left">
-							<img src="assets/placeholder.jpg" alt="" style="width: 32px; height: 32px; border-radius: 20px;">
-							<div style="display: inline-block;vertical-align: top;margin: 8px;">Name of seller</div>
+							<img src="assets/placeholder.jpg" alt="" style="width: 32px; height: 32px; border-radius: 20px;" class="user-image">
+							<div style="display: inline-block;vertical-align: top;margin: 8px;" class="user-username">Name of seller</div>
 						</div>
 
 						<div class="margin">
-							<img src="assets/placeholder.jpg" alt="Gig Main Image" style="width: 100%;">
+							<img src="assets/placeholder.jpg" alt="Gig Main Image" class="gig-image" style="width: 100%;">
 						</div>
 
 						<div class="margin" id="description">
 							<h3>About This Gig</h3>
 							<br>
-							<div>Please check out my portfolio for more music I've done!
+							<div class="gig-description">Please check out my portfolio for more music I've done!
 								<br>
 								https://soundcloud.com/lil_xiaolongbao
 								<br>
@@ -94,12 +94,12 @@
 						<div class="margin">
 							<div class="display-inline-block" style="margin-left: 20px; vertical-align: top;">
 								<h4>Genre</h4>
-								<div>Pop Cinematic</div>
+								<div class="gig-genres">Pop Cinematic</div>
 							</div>
 
 							<div class="display-inline-block" style="margin-left: 40px; vertical-align: top;">
 								<h4>Purpose</h4>
-								<div>
+								<div class="gig-purposes">
 									Films & Videos
 									<br>
 									Video Games
@@ -111,8 +111,8 @@
 							<h3>About the seller</h3>
 
 							<div class="margin text-left">
-								<img src="assets/placeholder.jpg" alt="" style="width: 32px; height: 32px; border-radius: 20px;">
-								<div class="display-inline-block margin" style="vertical-align: top; margin: 8px;">
+								<img src="assets/placeholder.jpg" alt="" class="user-image" style="width: 32px; height: 32px; border-radius: 20px;">
+								<div class="display-inline-block margin user-username" style="vertical-align: top; margin: 8px;">
 									Name of seller
 								</div>
 							</div>
@@ -122,19 +122,19 @@
 							<div class="margin">
 								<div class="display-inline-block" style="margin-left: 20px; vertical-align: top;">
 									<h4>From</h4>
-									<p>South Korea</p>
+									<p class="user-from">South Korea</p>
 								</div>
 
 								<div class="display-inline-block" style="margin-left: 40px; vertical-align: top;">
 									<h4>Member since</h4>
-									<p>Nov 2020</p>
+									<p class="user-registration">Nov 2020</p>
 								</div>
 							</div>
 
 							<div class="line margin"></div>
 
 							<div class="margin" style="margin-left: 20px;">
-								<p>Hi, you can call me mei, and I am a professional composer/remixer with years of experience in making electronic/pop music. From cute chiptune to film score, I am open to any style of music.</p>
+								<p class="user-desc">Hi, you can call me mei, and I am a professional composer/remixer with years of experience in making electronic/pop music. From cute chiptune to film score, I am open to any style of music.</p>
 							</div>
 						</div>
 
@@ -368,4 +368,33 @@
 	</div>
 </body>
 
+<script src="js/jquery-3.6.0.min.js"></script>
+<script>
+
+	function fillData(class_name, value){
+		let elements = $('.' + class_name);
+
+		elements.empty();
+
+		$('.' + class_name).append(value);
+	}
+
+	function buildObject(keys, values){
+		let object = {};
+		for (let i = 0; i <= values.length -1; i++) object[keys[i]] = values[i];
+		return object;
+	}
+
+	$(function () {
+		$.getJSON( "https://623af9f6f8827fbe47ac3209.mockapi.io/gigs/1", function( data ) {
+			
+		  	$.each( data, ( key, val ) => {
+		  		console.log(val.split('\n'));
+		  		let gig = buildObject(key, val);
+		  		//console.log(gig);
+		  		fillData('gig-name', gig.name);
+		  	});
+		});
+	});
+</script>
 </html>
