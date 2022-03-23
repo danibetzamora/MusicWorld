@@ -5,13 +5,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 
-	<link rel="stylesheet" href="css/responsive.css">
 	<link rel="stylesheet" href="css/app.css">
 	<link rel="stylesheet" href="css/footer.css">
 	<link rel="stylesheet" href="css/orders.css">
 </head>
 <body>
-	<nav style="display: none;">
+	<nav>
 	    <div class="main-title-class">
 	        <a href="#" class="main-title">Music World</a>
 	        <img src="assets/Music World Logo Blue.svg" alt="MWLogo" class="main-logo">
@@ -46,20 +45,19 @@
 			</div>
 
 			<div class="margin tables-links">
-				<a href="#" class="table-link">Active</a>
-				<a href="#" class="table-link">Missing details</a>
-				<a href="#" class="table-link">Awaiting my review</a>
-				<a href="#" class="table-link">Delivered</a>
-				<a href="#" class="table-link">Completed</a>
-				<a href="#" class="table-link">Cancelled</a>
-				<a href="#" class="table-link">All</a>
+				<a href="#">Active</a>
+				<a href="#">Missing details</a>
+				<a href="#">Awaiting my review</a>
+				<a href="#">Delivered</a>
+				<a href="#">Completed</a>
+				<a href="#">Cancelled</a>
+				<a href="#">All</a>
 			</div>
 
-			<div class="margin responsive-table">
+			<div class="margin">
 				<table class="gigs-table">
 					<thead>
 						<tr>
-							<th></th>
 							<th></th>
 							<th style="width: 13%;">Order Date</th>
 							<th style="width: 13%;">Due on</th>
@@ -69,10 +67,10 @@
 					</thead>
 					<tbody>
 						<tr>
-							<td class="table-image-wrapper">
-								<img src="assets/placeholder.png" alt="Gig image" class="table-image">
+							<td style="display: flex;">
+								<img src="assets/placeholder.png" alt="Gig image" style="width: 10%;">
+								<div style="margin: 15px; display: inline-block;">be your personal swimming coach and analyst</div>
 							</td>
-							<td>be your personal swimming coach and analyst</td>
 							<td>07 Feb 2022</td>
 							<td>10 Feb 2022</td>
 							<td>€11.52</td>
@@ -82,10 +80,10 @@
 						</tr>
 
 						<tr>
-							<td class="table-image-wrapper">
-								<img src="assets/placeholder.png" alt="Gig image" class="table-image">
+							<td style="display: flex;">
+								<img src="assets/placeholder.png" alt="Gig image" style="width: 10%;">
+								<div style="margin: 15px; display: inline-block;">do photoshop editing, graphic designing job professionally</div>
 							</td>
-							<td>do photoshop editing, graphic designing job professionally</td>
 							<td>08 Jan 2022</td>
 							<td>09 Jan 2022</td>
 							<td>€16.47</td>
@@ -95,10 +93,10 @@
 						</tr>
 
 						<tr>
-							<td class="table-image-wrapper">
-								<img src="assets/placeholder.png" alt="Gig image" class="table-image">
+							<td style="display: flex;">
+								<img src="assets/placeholder.png" alt="Gig image" style="width: 10%;">
+								<div style="margin: 15px; display: inline-block;">setup google analytics and track shopify store or wordpress website</div>
 							</td>
-							<td>setup google analytics and track shopify store or wordpress website</td>
 							<td>31 Dec 2021</td>
 							<td>01 Jan 2022</td>
 							<td>€53.82</td>
@@ -108,10 +106,10 @@
 						</tr>
 
 						<tr>
-							<td class="table-image-wrapper">
-								<img src="assets/placeholder.png" alt="Gig image" class="table-image">
+							<td style="display: flex;">
+								<img src="assets/placeholder.png" alt="Gig image" style="width: 10%;">
+								<div style="margin: 15px; display: inline-block;">do themeforest wordpress theme installation and demo set up</div>
 							</td>
-							<td>do themeforest wordpress theme installation and demo set up</td>
 							<td>25 Dec 2021</td>
 							<td>26 Dec 2022</td>
 							<td>€16.53</td>
@@ -125,9 +123,9 @@
 
 		</div>
 
-		<div id="footer" class="footer">
-			<div class="flexbox" style="margin-top: 25px;">
-				<div class="col-20 footer-offset">
+		<div class="footer">
+			<div class="display-flex" style="margin-top: 25px;">
+				<div class="width-15" style="margin-left: 20%;">
 					<ul class="footer-list">
 						<li class="footer-list-item footer-list-header">Categories</li>
 						<a href="/category/1"><li class="footer-list-item">Instrument Lessons</li></a>
@@ -138,13 +136,13 @@
 						<a href="/category/6"><li class="footer-list-item">Beat Making</li></a>
 					</ul>
 				</div>
-				<div class="col-20">
+				<div class="width-30">
 					<div class="footer-logos" style="margin: auto;">
 						<a href="/"><img src="assets/logo.png" style="max-width: 200px;" alt="Music World - Logo"></a>
 						<a href="/"><img src="assets/logo-text.png" style="max-width: 200px;" alt="Music World - Logo text"></a>
 					</div>
 				</div>
-				<div class="col-20 footer-offset-2">
+				<div class="width-15">
 					<ul class="footer-list">
 						<li class="footer-list-item footer-list-header">About</li>
 						<a href="/#general-information"><li class="footer-list-item">General information</li></a>
@@ -156,17 +154,17 @@
 				</div>
 			</div>
 
-			<div class="flexbox" style="margin-top: 25px;">
-				<div class="col-60 display-flex-resp">
-					<div class="footer-logo col-50" style="max-width: fit-content;">
-						<a href="/"><img src="assets/logo-text.png" style="max-width: 200px;" alt="Music World - Logo text"></a>
+			<div class="display-flex" style="margin-top: 25px;">
+				<div class="width-50 display-flex">
+					<div class="footer-logo" style="max-width: fit-content;">
+						<a href="/"><<img src="assets/logo-text.png" style="max-width: 200px;" alt="Music World - Logo text"></a>
 					</div>
-					<div class="footer-rights col-50" style="height: 100%; padding: 15px 5px;">
+					<div class="footer-rights" style="height: 100%; padding: 15px 5px;">
 						Music World 2022 | All rights reserved
 					</div>
 				</div>
-				<div class="col-40">
-					<div class="float-right-resp">
+				<div class="width-50">
+					<div class="float-right">
 						<ul class="footer-inline-list">
 							<li class="footer-inline-list-item">
 								<a href="">

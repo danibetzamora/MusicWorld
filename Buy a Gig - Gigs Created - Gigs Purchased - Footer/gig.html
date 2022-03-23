@@ -5,13 +5,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 
-	<link rel="stylesheet" href="css/responsive.css">
 	<link rel="stylesheet" href="css/app.css">
 	<link rel="stylesheet" href="css/footer.css">
 	<link rel="stylesheet" href="css/gig.css">
 </head>
 <body>
-	<nav style="display: none;">
+	<nav>
 	    <div class="main-title-class">
 	        <a href="#" class="main-title">Music World</a>
 	        <img src="assets/Music World Logo Blue.svg" alt="MWLogo" class="main-logo">
@@ -54,7 +53,7 @@
 		<div style="width: 100%;">
 			<div class="gig-page">
 				<div class="display-flex">
-					<div class="col-2-50" style="margin: 0 10%;">
+					<div class="width-50" style="margin-left: 10%;">
 						<div class="margin">
 							<a href="#">Current category</a> <b>></b> <a href="#">Current gig</a>
 						</div>
@@ -63,7 +62,7 @@
 							<h2>I will make anime background music just for you</h4>
 						</div>
 
-						<div class="margin text-left">
+						<div class="margin">
 							<img src="assets/placeholder.jpg" alt="" style="width: 32px; height: 32px; border-radius: 20px;">
 							<div style="display: inline-block;vertical-align: top;margin: 8px;">Name of seller</div>
 						</div>
@@ -75,7 +74,8 @@
 						<div class="margin" id="description">
 							<h3>About This Gig</h3>
 							<br>
-							<div>Please check out my portfolio for more music I've done!
+							<p>
+								Please check out my portfolio for more music I've done!
 								<br>
 								https://soundcloud.com/lil_xiaolongbao
 								<br>
@@ -86,7 +86,7 @@
 								From Funimation to Steam indie games, I composed tracks for various styles and manners.
 								<br>
 								Mixed & mastered & ready to go for whatever reason you need I can also compose a track with your given melody
-							</div>
+							</p>
 						</div>
 
 						<div class="line margin"></div>
@@ -94,27 +94,28 @@
 						<div class="margin">
 							<div class="display-inline-block" style="margin-left: 20px; vertical-align: top;">
 								<h4>Genre</h4>
-								<div>Pop Cinematic</div>
+								<p>Pop Cinematic</p>
 							</div>
 
 							<div class="display-inline-block" style="margin-left: 40px; vertical-align: top;">
 								<h4>Purpose</h4>
-								<div>
+								<p>
 									Films & Videos
 									<br>
 									Video Games
-								</div>
+								</p>
 							</div>
 						</div>
 
-						<div class="margin text-left" id="seller">
+						<div class="margin" id="seller">
 							<h3>About the seller</h3>
 
-							<div class="margin text-left">
-								<img src="assets/placeholder.jpg" alt="" style="width: 32px; height: 32px; border-radius: 20px;">
-								<div class="display-inline-block margin" style="vertical-align: top; margin: 8px;">
-									Name of seller
-								</div>
+							<div class="display-inline-block margin" style="margin-left: 20px; vertical-align: top; width: 20%;">
+								<img src="assets/placeholder.jpg" alt="User image" style="width: 100%; height: auto;">
+							</div>
+
+							<div class="display-inline-block margin" style="margin-left: 40px; vertical-align: top;">
+								Username
 							</div>
 						</div>
 
@@ -143,7 +144,7 @@
 								<h3>Recommended for you</h4>
 							</div>
 
-							<div class="gig-item col-50">
+							<div class="gig-item">
 								<div>
 									<img src="assets/placeholder.jpg" alt="Gig image" style="width: 100%;">
 								</div>
@@ -163,7 +164,7 @@
 								</div>
 							</div>
 
-							<div class="gig-item col-50">
+							<div class="gig-item">
 								<div>
 									<img src="assets/placeholder.jpg" alt="Gig image" style="width: 100%;">
 								</div>
@@ -187,8 +188,11 @@
 						<div class="margin" id="faq">
 							<h3>FAQ</h3>
 							<br>
-							<div>Can I use your music on my twitch stream?</div>
-							<div>Yes! You can check the 'commercial usage' option with an additional fee!</div>
+							<p>
+								Can I use your music on my twitch stream?
+								<br>
+								Yes! You can check the 'commercial usage' option with an additional fee!
+							</p>
 						</div>
 
 						<div class="margin" id="reviews">
@@ -267,7 +271,7 @@
 			</div>
 		</div>
 
-		<div id="contact-form" class="col-2-30 contact-gig fixed-resp">
+		<div class="width-30 static-gig">
 			<div class="gig-contact-form">
 				<div class="">
 					<form action="url" method="post">
@@ -297,9 +301,9 @@
 			</div>
 		</div>
 
-		<div id="footer" class="footer">
-			<div class="flexbox" style="margin-top: 25px;">
-				<div class="col-20 footer-offset">
+		<div class="footer">
+			<div class="display-flex" style="margin-top: 25px;">
+				<div class="width-15" style="margin-left: 20%;">
 					<ul class="footer-list">
 						<li class="footer-list-item footer-list-header">Categories</li>
 						<a href="/category/1"><li class="footer-list-item">Instrument Lessons</li></a>
@@ -310,13 +314,13 @@
 						<a href="/category/6"><li class="footer-list-item">Beat Making</li></a>
 					</ul>
 				</div>
-				<div class="col-20">
+				<div class="width-30">
 					<div class="footer-logos" style="margin: auto;">
 						<a href="/"><img src="assets/logo.png" style="max-width: 200px;" alt="Music World - Logo"></a>
 						<a href="/"><img src="assets/logo-text.png" style="max-width: 200px;" alt="Music World - Logo text"></a>
 					</div>
 				</div>
-				<div class="col-20 footer-offset-2">
+				<div class="width-15">
 					<ul class="footer-list">
 						<li class="footer-list-item footer-list-header">About</li>
 						<a href="/#general-information"><li class="footer-list-item">General information</li></a>
@@ -328,17 +332,17 @@
 				</div>
 			</div>
 
-			<div class="flexbox" style="margin-top: 25px;">
-				<div class="col-60 display-flex-resp">
-					<div class="footer-logo col-50" style="max-width: fit-content;">
-						<a href="/"><img src="assets/logo-text.png" style="max-width: 200px;" alt="Music World - Logo text"></a>
+			<div class="display-flex" style="margin-top: 25px;">
+				<div class="width-50 display-flex">
+					<div class="footer-logo" style="max-width: fit-content;">
+						<a href="/"><<img src="assets/logo-text.png" style="max-width: 200px;" alt="Music World - Logo text"></a>
 					</div>
-					<div class="footer-rights col-50" style="height: 100%; padding: 15px 5px;">
+					<div class="footer-rights" style="height: 100%; padding: 15px 5px;">
 						Music World 2022 | All rights reserved
 					</div>
 				</div>
-				<div class="col-40">
-					<div class="float-right-resp">
+				<div class="width-50">
+					<div class="float-right">
 						<ul class="footer-inline-list">
 							<li class="footer-inline-list-item">
 								<a href="">
@@ -367,5 +371,4 @@
 		</div>
 	</div>
 </body>
-
 </html>

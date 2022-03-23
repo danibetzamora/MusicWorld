@@ -5,13 +5,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 
-	<link rel="stylesheet" href="css/responsive.css">
 	<link rel="stylesheet" href="css/app.css">
 	<link rel="stylesheet" href="css/footer.css">
 	<link rel="stylesheet" href="css/my_gigs.css">
 </head>
 <body>
-	<nav style="display: none;">
+	<nav>
 	    <div class="main-title-class">
 	        <a href="#" class="main-title">Music World</a>
 	        <img src="assets/Music World Logo Blue.svg" alt="MWLogo" class="main-logo">
@@ -45,24 +44,22 @@
 				<h1>Gigs</h1>
 			</div>
 
-			<div class="margin tables-links" style="margin: 40px 0;">
-				<a href="#" class="table-link">Active</a>
-				<a href="#" class="table-link">Pending approval</a>
-				<a href="#" class="table-link">Requires modification</a>
-				<a href="#" class="table-link">Draft</a>
-				<a href="#" class="table-link">Denied</a>
-				<a href="#" class="table-link">Paused</a>
-				<div class="float-right-resp" style="padding: 10px;">
-					<a href="#" class="create-gig">Create new gig</a>
-				</div>
+			<div class="margin tables-links">
+				<a href="?status=active">Active</a>
+				<a href="?status=pending">Pending approval</a>
+				<a href="?status=modification">Requires modification</a>
+				<a href="?status=draft">Draft</a>
+				<a href="?status=denied">Denied</a>
+				<a href="?status=paused">Paused</a>
+				<a href="?">All</a>
+				<a href="#" class="create-gig">Create new gig</a>
 			</div>
 
-			<div class="margin responsive-table">
+			<div class="margin">
 				<table class="gigs-table">
 					<thead>
 						<tr>
 							<th>Gig</th>
-							<th></th>
 							<th>Impressions</th>
 							<th>Clicks</th>
 							<th>Orders</th>
@@ -70,12 +67,12 @@
 							<th>Actions</th>
 						</tr>
 					</thead>
-					<tbody>
+					<tbody id="table-body">
 						<tr>
-							<td class="table-image-wrapper">
-								<img src="assets/placeholder.png" alt="Gig image" class="table-image">
+							<td style="display: flex;">
+								<img src="assets/placeholder.png" alt="Gig image" style="width: 10%;">
+								<div style="margin: 15px; display: inline-block;">I will give you a piano lesson</div>
 							</td>
-							<td>I will give you a piano lesson</td>
 							<td>164</td>
 							<td>5</td>
 							<td>0</td>
@@ -88,9 +85,9 @@
 
 		</div>
 
-		<div id="footer" class="footer">
-			<div class="flexbox" style="margin-top: 25px;">
-				<div class="col-20 footer-offset">
+		<div class="footer">
+			<div class="display-flex" style="margin-top: 25px;">
+				<div class="width-15" style="margin-left: 20%;">
 					<ul class="footer-list">
 						<li class="footer-list-item footer-list-header">Categories</li>
 						<a href="/category/1"><li class="footer-list-item">Instrument Lessons</li></a>
@@ -101,13 +98,13 @@
 						<a href="/category/6"><li class="footer-list-item">Beat Making</li></a>
 					</ul>
 				</div>
-				<div class="col-20">
+				<div class="width-30">
 					<div class="footer-logos" style="margin: auto;">
 						<a href="/"><img src="assets/logo.png" style="max-width: 200px;" alt="Music World - Logo"></a>
 						<a href="/"><img src="assets/logo-text.png" style="max-width: 200px;" alt="Music World - Logo text"></a>
 					</div>
 				</div>
-				<div class="col-20 footer-offset-2">
+				<div class="width-15">
 					<ul class="footer-list">
 						<li class="footer-list-item footer-list-header">About</li>
 						<a href="/#general-information"><li class="footer-list-item">General information</li></a>
@@ -119,17 +116,17 @@
 				</div>
 			</div>
 
-			<div class="flexbox" style="margin-top: 25px;">
-				<div class="col-60 display-flex-resp">
-					<div class="footer-logo col-50" style="max-width: fit-content;">
-						<a href="/"><img src="assets/logo-text.png" style="max-width: 200px;" alt="Music World - Logo text"></a>
+			<div class="display-flex" style="margin-top: 25px;">
+				<div class="width-50 display-flex">
+					<div class="footer-logo" style="max-width: fit-content;">
+						<a href="/"><<img src="assets/logo-text.png" style="max-width: 200px;" alt="Music World - Logo text"></a>
 					</div>
-					<div class="footer-rights col-50" style="height: 100%; padding: 15px 5px;">
+					<div class="footer-rights" style="height: 100%; padding: 15px 5px;">
 						Music World 2022 | All rights reserved
 					</div>
 				</div>
-				<div class="col-40">
-					<div class="float-right-resp">
+				<div class="width-50">
+					<div class="float-right">
 						<ul class="footer-inline-list">
 							<li class="footer-inline-list-item">
 								<a href="">
@@ -158,4 +155,48 @@
 		</div>
 	</div>
 </body>
+
+<script src="js/jquery-3.6.0.min.js"></script>
+<script>
+
+	function buildImageColumn(image, text){
+		return 	'<td>' +
+				'<img src="' + image + '" alt="Gig image" style="width: 10%;">' +
+				'<div style="margin: 15px; display: inline-block;">' + text + '</div>' +
+				'</td>';
+	}
+
+	function buildColumn(value){
+		return 	'<td>' +
+				value +
+				'</td>';
+	}
+
+	function buildRow(data){
+		return 	'<tr id="' + data.id + '">' +
+				buildImageColumn(data.image, data.name) +
+				buildColumn(data.impressions) +
+				buildColumn(data.clicks) +
+				buildColumn(data.orders) +
+				buildColumn(data.cancellations) +
+				buildColumn('') +
+				'</tr>';
+	}
+
+	function checkStatus(gig){
+		let status = ( new URLSearchParams(window.location.search) ).get('status');
+
+		return status == null || status == gig.status;
+	}
+
+	$(function () {
+		$.getJSON( "https://623af9f6f8827fbe47ac3209.mockapi.io/gigs", function( data ) {
+			let table = $('#table-body');
+
+			table.empty();
+
+		  	$.each( data, ( key, gig ) => checkStatus(gig) ? table.append(buildRow(gig)) : void(0) );
+		});
+	});
+</script>
 </html>

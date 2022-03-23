@@ -32,7 +32,7 @@
 	color: white;
 }
 
-.contact-gig{
+.static-gig{
 	z-index: 10;
 	position: fixed;
 	right: 5%;
@@ -52,13 +52,14 @@
 
 .gig-item{
 	display: inline-block;
-	padding: 5%;
+	width: 39%;
+	margin: 5%;
 }
 
 .review-bar{
 	height: 8px;
     display: inline-block;
-    width: calc(100% - 50px);
+    width: 400px;
     background-color: lightgrey;
     border-radius: 8px;
 }
