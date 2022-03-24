@@ -336,7 +336,7 @@ section.discover-MW {
     }
 
     .sponsors {
-        margin-left: 0.5em;
+        padding-right: 3em;
     }
 
     .sponsors > * {
@@ -350,6 +350,7 @@ section.discover-MW {
     .category-description {
         text-align: center;
         padding: 1%;
+        padding-right: 3em;
     }
 
     .slide-categories h1 {
@@ -364,6 +365,10 @@ section.discover-MW {
         padding: 0.5%;
     }
 
+    .slide-image-2 {
+        padding-right: 2em;
+    }
+
     .slide-ellipse {
         padding: 6%;
     }
@@ -375,19 +380,27 @@ section.discover-MW {
         margin-left: 3em;
         margin-right: 3em;
         margin-bottom: 2em;
+        padding-right: 3em;
     }
     
     .about-us-titles {
         text-align: center;
+        padding-right: 3em;
     }
 
     .paragraph {
         padding: 3%;
+        padding-right: 3em;
     }
 
     .about-us-button {
         display: flex;
         justify-content: center;
+        padding-right: 3em;
+    }
+
+    .about-us-image {
+        padding-right: 2em;
     }
 
     .why-title {
