@@ -1,0 +1,165 @@
+/* large size */
+@media screen and (min-width: 60em){
+   
+    
+
+
+
+}
+
+/* medium and small size */
+@media screen and (max-width: 60em){
+
+    .navigation{
+        display: none;
+    }
+    .hamburger{
+        display: inline-block !important;
+    }
+
+    .main-chat{
+        width: 74%;
+    }
+
+    .more-info{
+        display: none;
+    }
+    .howToGig{
+        display: none;
+    }
+
+    .LinkVideo{
+        display: block;
+    }
+
+
+
+
+
+}
+
+/*small size*/
+
+@media screen and (max-width: 40em){
+
+    nav{
+        display: none ;
+    }
+
+    .smallHeader{
+        display: block;
+    }
+
+    .hamburger{
+        display: none !important;
+    }
+
+    .hamburgerps{
+        display: block;
+    }
+
+
+
+    .search-containerphonesize{
+        display: flex;
+
+    }
+
+    .header{
+        display: none !important;
+    }
+
+    .main-chat{
+        
+        display: none !important;
+    }
+    .chats{
+        width: 100%;
+    }
+
+    .gigInfoIntro{
+        width: 100%;
+        margin-left: default;
+        margin-right: 10px;
+        margin-top: default;
+        height: 550px;
+        background-color: #fff;
+        border: 1px solid rgb(211,211,211);
+        border-radius: 3px;
+        min-width: 0px;
+    
+    }
+
+    .titleIntro p{
+        margin-top: 30px;
+        margin-left: 30px;
+    }
+
+    .gigTitleType input{
+        font-size: larger;
+        margin-top: 30px;
+        margin-left: 20px;
+        margin-right: 30px;
+        width: 250px;
+        height: 90px;
+        border: 1px solid rgb(211, 211, 211);
+        border-radius: 5px;
+    }
+
+    .categoryIntro p{
+        margin-top: 30px;
+        margin-left: 25px;
+    
+    }
+
+    .gigCategoryType{
+        margin-left: 19px;
+    }
+
+    .gigCategoryType input{
+        width: 114px;
+    }
+
+    .tagsIntro p{
+        margin-left: 10px;
+        margin-right: 4px;
+    }
+
+    .gigTagsType input{
+        width: 250px;
+    }
+
+    .descIntro{
+        margin-left:10px;
+        margin-right:20px;
+    }
+
+    .gigDescType input{
+        width: 250px;;
+    }
+
+    .Gallery{
+        margin-left: 300px;
+    }
+
+    .LinkVideo{
+        margin-left: 300px;
+    }
+
+    .createBtn{
+        margin-left: 300px;
+    }
+
+    
+
+
+    
+
+   
+
+
+
+
+
+}
+

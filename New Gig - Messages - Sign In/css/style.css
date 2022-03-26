@@ -21,9 +21,38 @@ nav{
     background-color: #fff;
 
 }
+.smallHeader{
+    display: none;
+}
+
+.hamburger{
+    display: none !important;
+    font-size: 30px;
+    margin-left: 30px;
+
+}
+
+.hamburgerps{
+    display: none;
+    font-size: 200px;
+    margin-top: 40px;
+    margin-left: 30px;
+}
+
+.hamburgeruserchat{
+    padding-left: 45%;
+}
 
 .logo{
     width: 280px;
+}
+
+.logophonesize{
+    width: 270px;
+    margin-left: 70px;
+    margin-top: 20px;
+    
+
 }
 
 .search-container{
@@ -36,8 +65,24 @@ nav{
     
 }
 
+.search-containerphonesize{
+    display: none;
+    border: 1px solid rgb(206, 206, 206);
+    border-radius: 2px;
+    height: 30px;
+    align-items: center;
+    width: 350px;
+    margin-left: 70px;
+    
+}
+
+
 .search-container span{
     margin-left: 5px;
+}
+
+.search-containerphonesize{
+   margin-top: 15px;
 }
 
 .search-btn{
@@ -50,6 +95,14 @@ nav{
     background-color: blue;
     color: #fff;
     width: 70px;
+    cursor: pointer;
+}
+
+.search-containerphonesize .search-btn button{
+    border: none;
+    background-color: blue;
+    color: #fff;
+    width: 80px;
     cursor: pointer;
 }
 
@@ -80,7 +133,11 @@ nav{
     color: rgb(50, 0, 233);
 }
 
+.logosps{
+    display: flex;
 
+
+}
 .content{
     width: 95vw;
     margin: auto;
@@ -96,12 +153,24 @@ nav{
     height: 100%;
 }
 
+
+
 .content .header{
     display: flex;
     align-items: center;
-    height: 70px;
+    height: 120px;
     border-bottom: 1px solid rgb(211, 211, 211);
     overflow: hidden;
+}
+
+.smallHeader{
+   
+    
+    height: 170px;
+    background-color: #fff;
+    border: 1px solid rgb(211, 211, 211);
+   
+
 }
 
 .header > p{
@@ -125,6 +194,18 @@ nav{
     /* width: 29.58%; */
     /* width: 320px; */
     width: 26%;
+    height: 100%;
+    border-right: 1px solid rgb(211, 211, 211);
+
+
+
+}
+
+.chatsSS{
+    /* margin-left: 20px; */
+    /* width: 29.58%; */
+    /* width: 320px; */
+    width: 100%;
     height: 100%;
     border-right: 1px solid rgb(211, 211, 211);
 
@@ -170,6 +251,22 @@ nav{
     padding-top: 10px;
   
 }
+
+.main-chatMS{
+    width: 74%;
+    height: 100%;
+    border-right: 1px solid rgb(211, 211, 211);
+    padding-top: 10px;
+  
+}
+
+.main-chatSS{
+    width: 100%;
+    height: 100%;
+    border-right: 1px solid rgb(211, 211, 211);
+    padding-top: 10px;
+  
+} 
 
 .message{
     display: flex;
@@ -276,6 +373,20 @@ padding-left: 20px;
 
 }
 
+
+.gigInfoIntroSS{
+    width: 100%;
+    margin-right: 10px;
+    
+    
+    height: 550px;
+    background-color: #fff;
+    border: 1px solid rgb(211,211,211);
+    border-radius: 3px;
+    
+
+}
+
 .howToGig{
     width: 250px;
     margin-left: 5px;
@@ -317,9 +428,19 @@ padding-left: 20px;
     
 }
 
+.titleIntroSS{
+    display: flex;
+    
+}
+
 .titleIntro p{
     margin-top: 30px;
     margin-left: 60px;
+}
+
+.titleIntroSS p{
+    margin-top: 30px;
+    margin-left: 30px;
 }
 .gigTitleType input{
     font-size: larger;
@@ -331,7 +452,22 @@ padding-left: 20px;
     border-radius: 5px;
 }
 
+.gigTitleTypeSS input{
+    font-size: larger;
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-right: 30px;
+    width: 250px;
+    height: 90px;
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 5px;
+}
+
 .categoryIntro{
+    display: flex;
+    
+}
+.categoryIntroSS{
     display: flex;
     
 }
@@ -342,8 +478,19 @@ padding-left: 20px;
 
 }
 
+.categoryIntroSS p{
+    margin-top: 30px;
+    margin-left: 25px;
+
+}
+
 .gigCategoryType{
     display: flex;
+}
+
+.gigCategoryTypeSS{
+    display: flex;
+    margin-left: 19px;
 }
 .gigCategoryType input{
     
@@ -357,14 +504,39 @@ padding-left: 20px;
     border-radius: 5px;
 }
 
+.gigCategoryTypeSS input{
+    
+    
+    margin-top: 30px;
+    margin-left: 20px;
+    width: 114px;
+    height: 30px;
+    
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 5px;
+}
+
 .tagsIntro{
     display: flex;
     
 }
+.tagsIntroSS{
+    display: flex;
+    
+}
+
+
 
 .tagsIntro p{
     margin-top: 30px;
     margin-left: 25px;
+
+}
+
+.tagsIntroSS p{
+    margin-top: 30px;
+    margin-left: 10px;
+    margin-right: 4px;
 
 }
 .gigTagsType input{
@@ -377,7 +549,22 @@ padding-left: 20px;
     border-radius: 5px;
 }
 
+.gigTagsTypeSS input{
+    
+    margin-top: 40px;
+    margin-left: 0px;
+    width: 250px;
+    height: 60px;
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 5px;
+}
+
 .descIntro{
+    display: flex;
+    
+}
+
+.descIntroSS{
     display: flex;
     
 }
@@ -385,6 +572,13 @@ padding-left: 20px;
 .descIntro p{
     margin-top: 30px;
     margin-left: 30px;
+
+}
+
+.descIntroSS p{
+    margin-top: 30px;
+    margin-left: 10px;
+    margin-right: 20px;
 
 }
 .gigDescType input{
@@ -397,19 +591,74 @@ padding-left: 20px;
     border-radius: 5px;
 }
 
-
-.Gallery{
+.gigDescTypeSS input{
     
-    margin-left: 500px;
+    margin-top: 40px;
+    margin-left: 20px;
+    width: 250px;
+    height: 180px;
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 5px;
+}
+
+
+.linksCreateGig a{
+    
+    
     border: none;
     background-color: #fff;
     color: rgb(22, 18, 236);
     font-size: 15px;
 }
 
+
+.linksCreateGigSS a{
+    
+    
+    border: none;
+    background-color: #fff;
+    color: rgb(22, 18, 236);
+    font-size: 15px;
+}
+
+.Gallery{
+    margin-left: 500px;
+
+}
+
+.GallerySS{
+    margin-left: 300px;
+
+}
+
+.LinkVideo{
+    margin-left: 340px;
+    display: none;
+
+
+
+}
+
+.LinkVideoSS{
+    margin-left: 300px;
+
+
+
+}
+
 .createBtn{
     margin-top: 10px;
     margin-left: 600px;
+    border: none;
+    color: #fff;
+    background-color: rgb(22, 18, 236);
+    font-size: 15px;
+    border-radius: 3px;
+}
+
+.createBtnSS{
+    margin-top: 10px;
+    margin-left: 300px;
     border: none;
     color: #fff;
     background-color: rgb(22, 18, 236);
