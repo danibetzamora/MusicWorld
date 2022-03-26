@@ -1,0 +1,492 @@
+body {
+    font-family: 'ABeeZee';
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100vw;
+}
+
+h1 {
+    font-family: 'Piedra';
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+
+header {
+    background-image: url(../images/hero-image.jpg);
+    background-repeat:no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.hero-class {
+    display: flex;
+    align-items: center;
+    padding: 1.5%;
+}
+
+.hero-title {
+    font-family: 'Piedra';
+    font-size: 4rem;
+    color: black;
+}
+
+.hero-logo {
+    height: 6em;
+    width: 6em;
+}
+
+.slide-menu {
+    display: none;
+    margin-top: 0.4em;
+    margin-right: 1em;
+    font-size: 2.5rem;
+}
+
+nav {
+    padding: 1.5%;
+    width: 40em;
+}
+
+nav ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    justify-content: space-around;
+    list-style-type: none; 
+}
+
+nav ul > * {
+    flex-shrink: 0;
+}
+
+nav a {
+    color: black;
+    font-weight: bold;
+}
+
+.sponsors {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 3%;
+    padding-right: 3%;
+    min-height: 5em;
+    background-color: rgb(240, 240, 240);
+}
+
+.slide-categories {
+    background-image: url(../images/guitar-slide.jfif);
+    background-repeat:no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border-top: solid 1px transparent;
+    width: 100vw;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.slide-categories > .category-description, .slide-icon, .slide-ellipse {
+    flex-basis: 9em;
+}
+
+.category-description {
+    line-height: 1em;
+}
+
+.category-description h1 {
+    margin-left: 2%;
+    color: white;
+}
+
+.category-description h2 {
+    margin-left: 2%;
+    color: white;
+}
+
+.slide-icon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slide-image-1 {
+    padding: 1em;
+}
+
+.slide-image-2 {
+    padding: 1em;
+}
+
+.slide-category-image-a {
+    transform: scaleX(-1);
+    width: 3em;
+    height: 3em;
+}
+
+.slide-category-image-b {
+    width: 3em;
+    height: 3em;
+}
+
+.slide-ellipse {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 2%;
+    gap: 1.5rem;
+}
+
+.slide-ellipse > * {
+    height: 1.2em;
+    width: 1.2em;
+}
+
+.about-us {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    min-height: 70vh;
+}
+
+.about-us > * {
+    flex-basis: 35vw;
+    flex-shrink: 0;
+}
+
+.about-us-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-us-titles h1 {
+    margin: 0;
+    margin-top: 1em;
+}
+
+.about-us-titles h2 {
+    margin: 0;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.paragraph {
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: 1.2rem;
+}
+
+.button {
+    height: 2em;
+    width: 12em;
+    line-height: 34px;
+    padding: 0.5%;
+    margin-bottom: 3em;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #211DBF;
+    color: white;
+}
+
+.about-us-image {
+    text-align: end;
+}
+
+.why-MW {
+    background-image: url(../images/why-image.jpg);
+    background-repeat:no-repeat;
+    background-position: center center;
+    background-size: cover; 
+    width: 100vw;
+    min-height: 90vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.why-MW-reasons {
+    display: flex;
+    flex-direction: column;
+    margin-top: -3em;
+    margin-right: 12em;
+}
+
+.why-title {
+    height: 10em;
+}
+
+.reasons-list {
+    margin: 0;
+    padding: 0;
+}
+
+.reasons-list li {
+    list-style: none;
+}
+
+.reasons-list li p {
+    background-color: white;
+    height: 3em;
+    width: auto;
+    border-radius: 12px;
+    line-height: 45px;
+    margin-left: 0.5em;
+}
+
+.check {
+    display: flex;
+    align-items: center;
+    color: white;
+    
+}
+
+.check-image {
+    height:1.5em;
+    width: 1.5em;
+    padding: 1.5%;
+}
+
+section.discover-MW {
+    border-top: solid 1px transparent;
+    text-align: center;
+    min-height: 5em;
+    width: 100vw;
+    background-color: rgb(240, 240, 240);
+}
+
+.discover-MW h1 {
+    margin-top: 0.6em;
+    font-size: 2em;
+}
+
+.comments-section {
+    background-image: url(../images/comments-image.jpg);
+    background-repeat:no-repeat;
+    background-position: center center;
+    background-size: cover;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 5.5em;
+}
+
+.comments-section h1 {
+    margin-top: 1em;
+    margin-left: 1em;
+    color: white;
+}
+
+.people-comments {
+    display: flex;
+    justify-content: space-around;
+}
+
+.comment {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 20em;
+    width: 12em;
+    border-radius: 20px;
+    padding: 2%;
+    background-color: white;
+}
+
+.comment p {
+    text-justify: inter-word;
+}
+
+@media (max-width: 960px) {
+    header {
+        background-image: url(../images/hero-image-2.jpg);
+    }
+
+    .title {
+        margin-left: 2em;
+    }
+
+    .slide-menu {
+        display: block;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .sponsors {
+        padding-right: 3em;
+    }
+
+    .sponsors > * {
+        padding: 2%;
+    }
+
+    .slide-categories {
+        background-image: url(../images/guitar-slide-2.jpg);
+    }
+
+    .category-description {
+        text-align: center;
+        padding: 1%;
+        padding-right: 3em;
+    }
+
+    .slide-categories h1 {
+        font-size: 3rem;
+    }
+
+    .slide-categories h2 {
+        font-size: 1.5rem;
+    }
+
+    .slide-image-1 {
+        padding: 0.5%;
+    }
+
+    .slide-image-2 {
+        padding-right: 2em;
+    }
+
+    .slide-ellipse {
+        padding: 6%;
+    }
+
+    .about-us {
+        flex-direction: column;
+        justify-content: space-between;
+        width: 85%;
+        margin-left: 3em;
+        margin-right: 3em;
+        margin-bottom: 2em;
+        padding-right: 3em;
+    }
+    
+    .about-us-titles {
+        text-align: center;
+        padding-right: 3em;
+    }
+
+    .paragraph {
+        padding: 3%;
+        padding-right: 3em;
+    }
+
+    .about-us-button {
+        display: flex;
+        justify-content: center;
+        padding-right: 3em;
+    }
+
+    .about-us-image {
+        padding-right: 2em;
+    }
+
+    .why-title {
+        height: auto;
+    }
+
+    .why-title h1 {
+        font-size: 3em;
+    }
+
+    .comments-section {
+        justify-content: space-between;
+        align-items: center;
+        gap: 0;
+    }
+
+    .comments-title {
+        margin-right: 3em;
+    }
+
+    .comments-title h1 {
+        font-size: 3em;
+    }
+
+    .comment {
+        margin-bottom: 15em;
+        padding: 10%;
+    }
+
+    #comment-2 {
+        display: none;
+    }
+
+    #comment-3 {
+        display: none;
+    }
+}
+
+@media (max-width: 1328px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .title {
+        margin-left: 1em;
+    }
+
+    .hero-logo {
+        height: 4em;
+        width: 4em;
+    }
+
+    nav {
+        width: 35em;
+    }
+
+    .sponsors {
+        justify-content: space-around;
+    }
+
+    .category-description {
+        margin-left: 1em;
+    }
+
+    .slide-image-1 {
+        margin-left: 1em;
+    }
+
+    .about-us {
+        justify-content: space-around;
+    }
+
+    .why-MW {
+        background-image: url(../images/why-image-2.jpg);
+        justify-content: center;
+    }
+
+    .why-MW > * {
+        margin: 0;
+        padding: 0;
+        margin-left: 1em;
+        margin-right: 1em;
+        margin-bottom: 1em;
+    }
+
+    .why-title h1 {
+        color: white;
+    }
+}

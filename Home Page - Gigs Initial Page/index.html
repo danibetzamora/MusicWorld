@@ -4,17 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Style Sheet -->
+    <link rel="stylesheet" href="css/index.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee&family=Piedra&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons  -->
+    <script src="https://kit.fontawesome.com/62ea397d3a.js"></script>
+
     <title>MusicWorld</title>
-    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
     <div class="container">
         <header>
             <div class="hero-class">
-                <a href="#" class="hero-title">Music World</a>
-                <img src="images/Music World Logo.svg" alt="MWLogo" class="hero-logo">
+                <div class="title">
+                    <a href="#" class="hero-title">Music World</a>
+                </div>
+
+                <div class="logo">
+                    <img src="images/Music World Logo.svg" alt="MWLogo" class="hero-logo">
+                </div>
             </div>
-            
+
+            <div class="slide-menu">
+                <div class="fas fa-bars"></div>
+            </div>
+
             <nav>
                 <ul>
                     <li><a href="#">About Us</a></li>
@@ -22,9 +42,7 @@
                     <li><a href="#">Sign in</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
-            </nav>
-
-            <img src="images/hero-image.jpg" alt="Backgorund Image" class="hero-image">
+            </nav>  
         </header>
 
         <section class="sponsors">
@@ -41,8 +59,13 @@
             </div>
             
             <div class="slide-icon">
-                <img src="images/slide-icon-right.svg" alt="Slide Left" class="slide-category-image-a">
-                <img src="images/slide-icon-right.svg" alt="Slide Right" class="slide-category-image-b">
+                <div class="slide-image-1">
+                    <img src="images/slide-icon-right.svg" alt="Slide Left" class="slide-category-image-a">
+                </div>
+                
+                <div class="slide-image-2">
+                    <img src="images/slide-icon-right.svg" alt="Slide Right" class="slide-category-image-b">
+                </div>
             </div>
 
             <div class="slide-ellipse">
@@ -54,22 +77,30 @@
                 <img src="images/ellipse-light.svg" alt="Ellipse Light">
             </div>
 
-            <img src="images/guitar-slide.jfif" alt="Slide Image" class="slide-category-image">
+            <!--img src="images/guitar-slide.jfif" alt="Slide Image" class="slide-category-image"-->
         </section>
 
         <section class="about-us">
             <div class="about-us-content">
-                <h1>About Us</h1>
-                <h2>We want to bring you closer to music</h2>
-                <p class="paragraph">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Recusandae praesentium quasi architecto dolorum expedita dignissimos suscipit commodi inventore, 
-                    quibusdam facilis debitis ex perspiciatis magnam ut excepturi eligendi harum ratione voluptate cumque 
-                    voluptatibus neque esse. Modi?
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Recusandae praesentium quasi architecto dolorum expedita dignissimos suscipit commodi inventore.
-                </p>
-                <p class="button">Read More</p>
+                <div class="about-us-titles">
+                    <h1>About Us</h1>
+                    <h2>We want to bring you closer to music</h2>
+                </div>
+               
+                <div class="about-us-text">
+                    <p class="paragraph">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Recusandae praesentium quasi architecto dolorum expedita dignissimos suscipit commodi inventore, 
+                        quibusdam facilis debitis ex perspiciatis magnam ut excepturi eligendi harum ratione voluptate cumque 
+                        voluptatibus neque esse. Modi?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Recusandae praesentium quasi architecto dolorum expedita dignissimos suscipit commodi inventore.
+                    </p>
+                </div>
+                
+                <div class="about-us-button">
+                    <p class="button">Read More</p>
+                </div>
             </div>
 
             <div class="about-us-image">
@@ -83,28 +114,47 @@
                     <h1>Why use Music World</h1>
                 </div>
 
-                <ul class="reasons">
-                    <li>
-                        <h4>The best for every budget</h4>
-                        <p>Find high-quality services at every price.</p>
-                    </li>
-
-                    <li>
-                        <h4>The best for every budget</h4>
-                        <p>Find high-quality services at every price.</p>
-                    </li>
-
-                    <li>
-                        <h4>The best for every budget</h4>
-                        <p>Find high-quality services at every.</p>
-                    </li>
-
-                    <li>
-                        <h4>The best for every budget</h4>
-                        <p>Find high-quality services at every price.</p>
-                    </li>
-                </ul>
-                <img src="images/why-image.jpg" alt="Why MW" class="why-image">
+                <div class="reasons">
+                    <ul class="reasons-list">
+                        <li>
+                            <div class="check">
+                                <img src="images/check.png" alt="" class="check-image">
+                                <h4>The best for every budget</h4>
+                            </div>
+                            
+                            <p>Find high-quality services at every price.</p>
+                        </li>
+    
+                        <li>
+                            <div class="check">
+                                <img src="images/check.png" alt="" class="check-image">
+                                <h4>The best for every budget</h4>
+                            </div>
+                            
+                            <p>Find high-quality services at every price.</p>
+                        </li>
+    
+                        <li>
+                            <div class="check">
+                                <img src="images/check.png" alt="" class="check-image">
+                                <h4>The best for every budget</h4>
+                            </div>
+                           
+                            <p>Find high-quality services at every.</p>
+                        </li>
+    
+                        <li>
+                            <div class="check">
+                                <img src="images/check.png" alt="" class="check-image">
+                                <h4>The best for every budget</h4>
+                            </div>
+                            
+                            <p>Find high-quality services at every price.</p>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!--img src="images/why-image.jpg" alt="Why MW" class="why-image"-->
             </div>
         </section>
 
@@ -113,8 +163,10 @@
         </section>
 
         <section class="comments-section">
-            <h1>What People Say</h1>
-
+            <div class="comments-title">
+                <h1>What People Say</h1>
+            </div>
+            
             <div class="people-comments">
                 <div class="comment">
                     <img src="images/profile-image-1.png" alt="Person 1">
@@ -122,20 +174,20 @@
                     <h3>Callie Morgam</h3>
                 </div>
 
-                <div class="comment">
+                <div class="comment" id="comment-2">
                     <img src="images/profile-image-2.png" alt="Person 2">
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, earum.</p>
                     <h3>Nathan McBride</h3>
                 </div>
 
-                <div class="comment">
+                <div class="comment" id="comment-3">
                     <img src="images/profile-image-3.png" alt="Person 3">
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, earum.</p>
                     <h3>Tamara Bellis</h3>
                 </div>
             </div>
 
-            <img src="images/comments-image.jpg" alt="Comment Image" class="comments-image">
+            <!--img src="images/comments-image.jpg" alt="Comment Image" class="comments-image"-->
         </section>
     </div>
 </body>
