@@ -36,14 +36,14 @@
             if(valid1 && valid2) {
                 alert('¡Form successfully submitted!');
                 form.submit();
-            } else if(valid1 == false) {
-                alert('You must fill in all fields and take into account the format of each one. (If you hover the mouse pointer over each one you can get more information about it).');
-            } else {
+            } else if(valid2 == false) {
                 alert('Passwords do not match');
                 document.getElementById("password1").value = "";
                 document.getElementById("password1").style.background = '#FFDDDD';
                 document.getElementById("password2").value = "";
                 document.getElementById("password2").style.background = '#FFDDDD'; 
+            } else {
+                alert('You must fill in all fields and take into account the format of each one. (If you hover the mouse pointer over each one you can get more information about it).');
             }
         }  
 
