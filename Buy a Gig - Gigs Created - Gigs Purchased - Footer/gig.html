@@ -406,8 +406,6 @@
 
 		$.getJSON( "https://623af9f6f8827fbe47ac3209.mockapi.io/gigs", function( data ) {
 
-
-console.log(data[0]);
 			$('.rec1-image').prop('src', data[0].image);
 			$('.rec1-user-image').prop('src', data[0].user_image);
 			$('.rec1-user-name').append(data[0].user_name);
