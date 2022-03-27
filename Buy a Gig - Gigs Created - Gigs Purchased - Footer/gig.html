@@ -145,41 +145,31 @@
 
 							<div class="gig-item col-50">
 								<div>
-									<img src="assets/placeholder.jpg" alt="Gig image" style="width: 100%;">
+									<img class="rec1-image" src="assets/placeholder.jpg" alt="Gig image" style="width: 100%;">
 								</div>
 
 								<div>
-									<img src="assets/placeholder.jpg" alt="" style="width: 32px; height: 32px; border-radius: 20px;">
-									<div style="display: inline-block;vertical-align: top;margin: 8px;">Username</div>
+									<img class="rec1-user-image" src="assets/placeholder.jpg" alt="" style="width: 32px; height: 32px; border-radius: 20px;">
+									<div class="rec1-user-name" style="display: inline-block;vertical-align: top;margin: 8px;"></div>
 								</div>
 
 								<div>
-									<p>I will make an anime opening music for you</p>
-								</div>
-
-								<div>
-									<img src="assets/black_star.png" alt="Gig image" style="width: 10px;">
-									4.9 (82)
+									<p class="rec1-desc"></p>
 								</div>
 							</div>
 
 							<div class="gig-item col-50">
 								<div>
-									<img src="assets/placeholder.jpg" alt="Gig image" style="width: 100%;">
+									<img class="rec2-image" src="assets/placeholder.jpg" alt="Gig image" style="width: 100%;">
 								</div>
 
 								<div>
-									<img src="assets/placeholder.jpg" alt="" style="width: 32px; height: 32px; border-radius: 20px;">
-									<div style="display: inline-block;vertical-align: top;margin: 8px;">Username</div>
+									<img class="rec2-user-image" src="assets/placeholder.jpg" alt="" style="width: 32px; height: 32px; border-radius: 20px;">
+									<div class="rec2-user-name" style="display: inline-block;vertical-align: top;margin: 8px;"></div>
 								</div>
 
 								<div>
-									<p>I will make an anime opening music for you</p>
-								</div>
-
-								<div>
-									<img src="assets/black_star.png" alt="Gig image" style="width: 10px;">
-									4.9 (82)
+									<p class="rec2-desc"></p>
 								</div>
 							</div>
 						</div>
@@ -187,12 +177,13 @@
 						<div class="margin" id="faq">
 							<h3>FAQ</h3>
 							<br>
-							<div>Can I use your music on my twitch stream?</div>
-							<div>Yes! You can check the 'commercial usage' option with an additional fee!</div>
+							<div class="gig-faq"></div>
 						</div>
 
 						<div class="margin" id="reviews">
-							<h3 class="display-inline-block">84 reviews <span style="color: gold;">4.9</span></h3>
+							<h3 class="display-inline-block">
+								<span class="gig-reviews-all">84</span> reviews <span style="color: gold;">4.9</span>
+							</h3>
 
 							<div class="display-inline-block float-right">
 								Sort by
@@ -208,59 +199,29 @@
 							<div class="margin">
 								5 stars
 								<div class="review-bar" style="background: linear-gradient(to right, gold 75%, lightgrey 0%);"></div>
-								(15)
+								(<span class="gig-reviews-5">15</span>)
 							</div>
 							<div>
 								4 stars
 								<div class="review-bar"></div>
-								(0)
+								(<span class="gig-reviews-4">0</span>)
 							</div>
 							<div>
 								3 stars
 								<div class="review-bar" style="background: linear-gradient(to right, gold 25%, lightgrey 0%);"></div>
-								(5)
+								(<span class="gig-reviews-3">5</span>)
 							</div>
 								2 stars
 								<div class="review-bar"></div>
-								(0)
+								(<span class="gig-reviews-2">0</span>)
 							</div>
 							<div>
 								1 stars
 								<div class="review-bar"></div>
-								(0)
+								(<span class="gig-reviews-1">0</span>)
 							</div>
 
-							<div class="line margin"></div>
-
-							<div class="">
-							
-								<div class="review margin">
-									<div>
-										<img src="assets/placeholder.jpg" alt="" style="width: 32px; height: 32px; border-radius: 20px;">
-										<div style="display: inline-block;vertical-align: top;margin: 8px;">Username</div>
-									</div>
-
-									<div class="margin">
-										<p>It came out so perfect!!! I was worried about commissioning bgm but they took my small idea and turned it into something that blew my expectations away</p>
-										<p style="color: grey;">Published 2 months ago</p>
-									</div>
-								</div>
-
-								<div class="line margin"></div>
-							
-								<div class="review margin">
-									<div>
-										<img src="assets/placeholder.jpg" alt="" style="width: 32px; height: 32px; border-radius: 20px;">
-										<div style="display: inline-block;vertical-align: top;margin: 8px;">Username</div>
-									</div>
-
-									<div class="margin">
-										<p>Absolutely impecible talent AGAIN, This is my second time ordering and most definitely will not be my last! Great responses, and composer! Gave me absolutely everything I asked for! I LOVE THEIR WORK!</p>
-										<p style="color: grey;">Published 2 months ago</p>
-									</div>
-								</div>
-
-							</div>
+							<div class="reviews"></div>
 						</div>
 					</div>
 				</div>
@@ -379,21 +340,83 @@
 		$('.' + class_name).append(value);
 	}
 
+	function fillImage(class_name, value){
+		let elements = $('.' + class_name);
+
+		elements.empty();
+
+		$('.' + class_name).prop('src', value);
+	}
+
 	function buildObject(keys, values){
 		let object = {};
 		for (let i = 0; i <= values.length -1; i++) object[keys[i]] = values[i];
 		return object;
 	}
 
+	function buildReview(object){
+		let review = 
+		'<div class="line margin"></div>' +
+		'<div class="review margin">' +
+			'<div>' +
+				'<img src="' + object.image + '" alt="" style="width: 32px; height: 32px; border-radius: 20px;">' +
+				'<div style="display: inline-block;vertical-align: top;margin: 8px;">' + object.user + '</div>' +
+			'</div>' +
+			'<div class="margin">' +
+				'<p>' + object.text + '</p>' +
+				'<p style="color: grey;">' + object.created_at + '</p>' +
+			'</div>' +
+		'</div>';
+
+		$('.reviews').append(review);
+	}
+
+	function buildReview(object){
+		let review = 
+		'<div class="line margin"></div>' +
+		'<div class="review margin">' +
+			'<div>' +
+				'<img src="' + object.image + '" alt="" style="width: 32px; height: 32px; border-radius: 20px;">' +
+				'<div style="display: inline-block;vertical-align: top;margin: 8px;">' + object.user + '</div>' +
+			'</div>' +
+			'<div class="margin">' +
+				'<p>' + object.text + '</p>' +
+				'<p style="color: grey;">' + object.created_at + '</p>' +
+			'</div>' +
+		'</div>';
+
+		$('.reviews').append(review);
+	}
+
 	$(function () {
-		$.getJSON( "https://623af9f6f8827fbe47ac3209.mockapi.io/gigs/1", function( data ) {
-			
-		  	$.each( data, ( key, val ) => {
-		  		console.log(val.split('\n'));
-		  		let gig = buildObject(key, val);
-		  		//console.log(gig);
-		  		fillData('gig-name', gig.name);
-		  	});
+		$.getJSON( "https://623af9f6f8827fbe47ac3209.mockapi.io/gig", function( data ) {
+			let object = data[0];
+
+		  	$.each( object, ( key, val ) => fillData(key, val) );
+
+		  	fillImage('user-image', object['user-image']);
+		  	fillImage('gig-image', object['gig-image']);
+		});
+
+
+		$.getJSON( "https://623af9f6f8827fbe47ac3209.mockapi.io/reviews", function( data ) {
+
+		  	$.each( data, ( key, val ) => buildReview(val) );
+		});
+
+		$.getJSON( "https://623af9f6f8827fbe47ac3209.mockapi.io/gigs", function( data ) {
+
+
+console.log(data[0]);
+			$('.rec1-image').prop('src', data[0].image);
+			$('.rec1-user-image').prop('src', data[0].user_image);
+			$('.rec1-user-name').append(data[0].user_name);
+			$('.rec1-desc').append(data[0].desc);
+			$('.rec2-image').prop('src', data[1].image);
+			$('.rec2-user-image').prop('src', data[1].user_image);
+			$('.rec2-user-name').append(data[1].user_name);
+			$('.rec2-desc').append(data[1].desc);
+
 		});
 	});
 </script>
