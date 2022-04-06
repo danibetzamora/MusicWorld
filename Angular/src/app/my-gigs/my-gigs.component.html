@@ -1,0 +1,22 @@
+<div style="width: 100%; padding: 20px 10%; background-color: #F7F7F7;">
+
+  <div class="margin">
+    <h1>Gigs</h1>
+  </div>
+
+  <div class="margin tables-links" style="margin: 40px 0;">
+    <a href="javascript:void(0);" (click)="filterStatus('active')" class="table-link">Active</a>
+    <a href="javascript:void(0);" (click)="filterStatus('pending')" class="table-link">Pending approval</a>
+    <a href="javascript:void(0);" (click)="filterStatus('modification')" class="table-link">Requires modification</a>
+    <a href="javascript:void(0);" (click)="filterStatus('draft')" class="table-link">Draft</a>
+    <a href="javascript:void(0);" (click)="filterStatus('denied')" class="table-link">Denied</a>
+    <a href="javascript:void(0);" (click)="filterStatus('paused')" class="table-link">Paused</a>
+    <a href="javascript:void(0);" (click)="filterStatus()" class="table-link">All</a>
+    <div class="float-right-resp" style="padding: 10px;">
+      <a href="#" class="create-gig">Create new gig</a>
+    </div>
+  </div>
+
+  <my-gigs-table [gigs]="gigs"></my-gigs-table>
+
+</div>

@@ -1,0 +1,142 @@
+<div *ngIf="gig != undefined">
+  <div class="gig-navbar">
+    <div class="width-100">
+      <div class="p-5px">
+        <a href="#overview" class="gig-navbar-link">Overview</a>
+        <a href="#description" class="gig-navbar-link">Description</a>
+        <a href="#seller" class="gig-navbar-link">About the seller</a>
+        <a href="#faq" class="gig-navbar-link">FAQ</a>
+        <a href="#reviews" class="gig-navbar-link">Reviews</a>
+      </div>
+    </div>
+  </div>
+
+  <div style="width: 100%;">
+    <div class="gig-page">
+      <div class="display-flex">
+        <div class="col-2-50" style="margin: 0 10%;">
+          <div class="margin">
+            <a href="#">{{ gig.gig_category }}</a> <b>></b> <a href="#">{{ gig.gig_name }}</a>
+          </div>
+
+          <div class="margin" id="overview">
+            <h2>{{ gig.gig_name }}</h2>
+          </div>
+
+          <div class="margin text-left">
+            <img src="{{ gig.user_image }}" alt="" style="width: 32px; height: 32px; border-radius: 20px;">
+            <div style="display: inline-block;vertical-align: top;margin: 8px;">{{ gig.user_username }}</div>
+          </div>
+
+          <div class="margin">
+            <img src="{{ gig.gig_image }}" alt="Gig Main Image" style="width: 100%;">
+          </div>
+
+          <div class="margin" id="description">
+            <h3>About This Gig</h3>
+            <br>
+            <div>{{ gig.gig_description }}</div>
+          </div>
+
+          <div class="line margin"></div>
+
+          <div class="margin">
+            <div class="display-inline-block" style="margin-left: 20px; vertical-align: top;">
+              <h4>Genre</h4>
+              <div>{{ gig.gig_genres }}</div>
+            </div>
+
+            <div class="display-inline-block" style="margin-left: 40px; vertical-align: top;">
+              <h4>Purpose</h4>
+              <div>{{ gig.gig_purposes }}</div>
+            </div>
+          </div>
+
+          <div class="margin text-left" id="seller">
+            <h3>About the seller</h3>
+
+            <div class="margin text-left">
+              <img src="{{ gig.user_image }}" alt="" style="width: 32px; height: 32px; border-radius: 20px;">
+              <div class="display-inline-block margin" style="vertical-align: top; margin: 8px;">
+                {{ gig.user_username }}
+              </div>
+            </div>
+          </div>
+
+          <div class="margin seller-info-box">
+            <div class="margin">
+              <div class="display-inline-block" style="margin-left: 20px; vertical-align: top;">
+                <h4>From</h4>
+                <p>{{ gig.user_from }}</p>
+              </div>
+
+              <div class="display-inline-block" style="margin-left: 40px; vertical-align: top;">
+                <h4>Member since</h4>
+                <p>{{ gig.user_registration }}</p>
+              </div>
+            </div>
+
+            <div class="line margin"></div>
+
+            <div class="margin" style="margin-left: 20px;">
+              <p>{{ gig.user_desc }}</p>
+            </div>
+          </div>
+
+          <buy-gig-recommended [recommended]="recommended"></buy-gig-recommended>
+
+          <div class="margin" id="faq">
+            <h3>FAQ</h3>
+            <br>
+            <div>{{ gig.gig_faq }}</div>
+          </div>
+
+          <div class="margin" id="reviews">
+            <h3 class="display-inline-block">
+              {{ gig.gig_reviews_all }} reviews <span style="color: gold;">4.9</span>
+            </h3>
+
+            <div class="display-inline-block float-right">
+              Sort by
+              <form action="" class="display-inline-block">
+                <select class="display-inline-block">
+                  <option value="">most relevant</option>
+                  <option value="">price (lowest)</option>
+                  <option value="">price (highest)</option>
+                </select>
+              </form>
+            </div>
+
+            <div class="margin">
+              5 stars
+              <div class="review-bar" style="background: linear-gradient(to right, gold 75%, lightgrey 0%);"></div>
+              (<span>{{ gig.gig_reviews_5 }}</span>)
+            </div>
+            <div>
+              4 stars
+              <div class="review-bar"></div>
+              (<span>{{ gig.gig_reviews_4 }}</span>)
+            </div>
+            <div>
+              3 stars
+              <div class="review-bar" style="background: linear-gradient(to right, gold 25%, lightgrey 0%);"></div>
+              (<span>{{ gig.gig_reviews_3 }}</span>)
+            </div>
+            2 stars
+            <div class="review-bar"></div>
+            (<span>{{ gig.gig_reviews_2 }}</span>)
+          </div>
+          <div>
+            1 stars
+            <div class="review-bar"></div>
+            (<span>{{ gig.gig_reviews_1 }}</span>)
+          </div>
+
+          <buy-gig-reviews [reviews]="reviews"></buy-gig-reviews>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<buy-gig-contact-form></buy-gig-contact-form>

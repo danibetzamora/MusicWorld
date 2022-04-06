@@ -1,0 +1,36 @@
+.footer{
+	border-top: 1px solid #ddd;
+}
+.footer-list{
+	list-style-type: none;
+}
+.footer-list-item{
+	margin-top: 15px;
+	font-size: 18px;
+	color: #555;
+}
+.footer-list-header{
+	font-weight: bold;
+	color: #000;
+}
+.footer-logos{
+	max-width: 200px;
+}
+.footer-logo{
+	display: inline-block;
+	max-width: 200px;
+}
+.footer-rights{
+	display: inline-block;
+}
+.float-right{
+	float: right;
+}
+.footer-inline-list{
+	list-style-type: none;
+	margin-right: 20px;
+}
+.footer-inline-list-item{
+	display: inline-block;
+	margin: 1vw;
+}

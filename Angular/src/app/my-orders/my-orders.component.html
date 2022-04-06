@@ -1,0 +1,19 @@
+<div style="width: 100%; padding: 20px 10%; background-color: #F7F7F7;">
+
+  <div class="margin">
+    <h1>Manage orders</h1>
+  </div>
+
+  <div class="margin tables-links">
+    <a href="javascript:void(0);" (click)="filterStatus('active')" class="table-link">Active</a>
+    <a href="javascript:void(0);" (click)="filterStatus('missing')" class="table-link">Missing details</a>
+    <a href="javascript:void(0);" (click)="filterStatus('awaiting')" class="table-link">Awaiting my review</a>
+    <a href="javascript:void(0);" (click)="filterStatus('delivered')" class="table-link">Delivered</a>
+    <a href="javascript:void(0);" (click)="filterStatus('completed')" class="table-link">Completed</a>
+    <a href="javascript:void(0);" (click)="filterStatus('cancelled')" class="table-link">Cancelled</a>
+    <a href="javascript:void(0);" (click)="filterStatus()" class="table-link">All</a>
+  </div>
+
+  <my-orders-table [orders]="orders"></my-orders-table>
+
+</div>

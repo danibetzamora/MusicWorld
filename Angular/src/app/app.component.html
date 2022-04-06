@@ -1,0 +1,33 @@
+<nav>
+  <div class="main-title-class">
+    <a href="#" class="main-title">Music World</a>
+    <img src="assets/images/Music World Logo Blue.svg" alt="MWLogo" class="main-logo">
+  </div>
+
+  <div class="search-container">
+    <span class="material-icons">search</span>
+
+    <input type="text" class="search">
+
+    <div class="search-btn">
+      <button>Search</button>
+    </div>
+  </div>
+
+  <div class="navigation">
+    <a href="">Messages</a>
+    <a routerLink="/buy-gig">(TEMP) Buy gig</a>
+    <a routerLink="/my-gigs">MisGigs</a>
+    <a routerLink="/my-orders">Orders</a>
+    <a href="">Create a Gig</a>
+  </div>
+
+  <img src="assets/images/user-icon.png" alt="User Icon" class="user-icon">
+</nav>
+
+<div class="wrapper">
+
+  <router-outlet></router-outlet>
+
+  <app-footer></app-footer>
+</div>

@@ -1,0 +1,22 @@
+.gigs-table{
+  border-collapse: collapse;
+  width: 100%;
+  background-color: white;
+  border: 1px solid #E5E5E5;
+}
+.gigs-table th, .gigs-table td{
+  border-top: 1px solid #E5E5E5;
+  padding: 20px;
+  vertical-align: center;
+}
+.tables-links .table-link{
+  color: black;
+  margin: 10px;
+}
+
+.create-gig{
+  padding: 5px;
+  background-color: #211DBF;
+  border-radius: 5px;
+  color: white !important;
+}
