@@ -15,6 +15,7 @@ import { BuyGigReviewsComponent } from './buy-gig-reviews/buy-gig-reviews.compon
 import { FooterComponent } from './footer/footer.component';
 import { BuyGigContactFormComponent } from './buy-gig-contact-form/buy-gig-contact-form.component';
 import { CreateGigComponent } from './create-gig/create-gig.component';
+import { MessagesComponent } from './messages/messages.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { CreateGigComponent } from './create-gig/create-gig.component';
     FooterComponent,
     BuyGigContactFormComponent,
     CreateGigComponent,
+    MessagesComponent,
   ],
   imports: [
     BrowserModule,
