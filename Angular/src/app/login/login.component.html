@@ -62,21 +62,21 @@
         </div>
         
         <div class="signType">
-            <form name="login" id="login" method="get" action="">
+            <form  name="login" id="login" [formGroup]="loginForm" (submit)="submitLoginForm()">
                 <div class="login-field">
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="example@mail.com" autocomplete="new-text" 
+                    <input formControlName= "email" type="email" id="email" name="email" placeholder="example@mail.com" autocomplete="new-text" 
                     title="Email should correspond to the following format at least: example@mail.com" required>
                 </div>
             
                 <div class="login-field">
                     <label for="password">Password</label>
-                    <input type="password" id="password" name="password" placeholder="Password" autocomplete="new-text" pattern ="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                    <input formControlName= "password" type="password" id="password" name="password" placeholder="Password" autocomplete="new-text" pattern ="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
                     title="The password must contain at least 8 characters, a capital letter, and a number. (Letters and numbers only. Symbols are not allowed)." required>
                 </div>
 
                 <div class="login-button">
-                    <input id="loginButton" name="loginButton" type="button"  class="submit-button" value="Login">
+                    <button id="loginButton" name="loginButton" type="submit"  class="submit-button" value="Login"> Login </button>
                 </div>
             
                 <div class="linkSign">
