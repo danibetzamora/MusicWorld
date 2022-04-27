@@ -1,7 +1,9 @@
-import {Component, OnInit, ViewEncapsulation} from '@angular/core';
-import {HttpClient} from "@angular/common/http";
-import { Observable, throwError } from 'rxjs';
-import { catchError, retry } from 'rxjs/operators';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Gig } from "../gig.model";
+import { ActivatedRoute, ParamMap } from '@angular/router'
+import { GigService} from "../gig.service";
+import { Review} from "../review.model";
+import { ReviewService } from "../review.service";
 
 @Component({
   selector: 'app-buy-gig',
@@ -11,28 +13,47 @@ import { catchError, retry } from 'rxjs/operators';
 })
 export class BuyGigComponent implements OnInit {
 
-  gig : any;
-  recommended : any[] = [];
-  reviews : any[] = [];
+  id: string = '';
+  gig: Gig = new Gig;
+  recommended: Gig[] = [];
+  reviews: Review[] = [];
 
-  constructor(private http: HttpClient) {
-    this.getGig().subscribe( data => this.gig = data[0] );
-    this.getRecommended().subscribe( data => this.recommended = data.slice(0, 2) );
-    this.getReviews().subscribe( data => this.reviews = data );
+  constructor(
+    private route: ActivatedRoute,
+    private gigService: GigService,
+    private reviewService: ReviewService,
+  ) {
   }
 
-  ngOnInit(): void {}
-
-  public getGig(): Observable<any> {
-    return this.http.get("https://623af9f6f8827fbe47ac3209.mockapi.io/gig");
+  ngOnInit(): void {
+    this.route.paramMap.subscribe((params: ParamMap) => {
+      this.id = params.get('id') ?? '';
+      this.getGig();
+      this.getRecommended();
+      this.getReviews();
+    });
   }
 
-  public getReviews(): Observable<any> {
-    return this.http.get("https://623af9f6f8827fbe47ac3209.mockapi.io/reviews");
+  public getGig() {
+    this.gigService.getDocument(this.id).subscribe(
+      (res: any) => this.gig = ({...res.data(), 'id': res.id}) as Gig
+    );
   }
 
-  public getRecommended(): Observable<any> {
-    return this.http.get("https://623af9f6f8827fbe47ac3209.mockapi.io/gigs");
+  public getRecommended() {
+    this.gigService.getList().subscribe(
+      (res: any) => this.recommended = res.map(
+        (item: any) => ({...item.data(), 'id': item.id})
+      ).slice(0, 2) as Gig[]
+    );
+  }
+
+  public getReviews() {
+    this.reviewService.getList().subscribe(
+      (res: any) => this.reviews = res.map(
+        (item: any) => ({...item.data(), 'id': item.id})
+      ) as Review[]
+    );
   }
 
 }

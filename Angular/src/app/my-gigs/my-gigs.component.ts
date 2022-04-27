@@ -1,7 +1,7 @@
-import {Component, OnInit, ViewEncapsulation} from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable, throwError } from 'rxjs';
-import { catchError, retry } from 'rxjs/operators';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Gig } from "../gig.model";
+import { GigService } from "../gig.service";
+import { ReviewService } from "../review.service";
 
 @Component({
   selector: 'app-my-gigs',
@@ -11,22 +11,33 @@ import { catchError, retry } from 'rxjs/operators';
 })
 export class MyGigsComponent implements OnInit {
 
-  gigs : any[];
+  gigs: Gig[] = [];
 
-  constructor(private http: HttpClient) {
-    this.gigs = [];
+  constructor(
+    private gigService: GigService,
+    private reviewService: ReviewService,
+  ) {}
 
-    this.getGigs().subscribe( data => this.gigs = data );
+  ngOnInit(): void {
+    this.getGigs();
   }
 
-  ngOnInit(): void { }
-
-  public getGigs(): Observable<any> {
-    return this.http.get("https://623af9f6f8827fbe47ac3209.mockapi.io/gigs");
+  public getGigs(){
+    this.gigService.getList().subscribe(
+      (res: any) => this.gigs = res.map(
+        (item: any) => ({ ...item.data(), 'id': item.id})
+      ) as Gig[]
+    );
   }
 
   filterStatus(status : any = false) {
-    this.getGigs().subscribe( data => this.gigs = data.filter( (item: any) => status ? item.status == status : true ) );
+    this.gigService.getList().subscribe(
+      (res: any) => this.gigs = res.map(
+        (item: any) => ({ ...item.data(), 'id': item.id})
+      ).filter(
+        (item: any) => status ? item.status == status : true
+      ) as Gig[]
+    );
   }
 
 }

@@ -18,9 +18,9 @@
           <img src="{{ order.image }}" alt="Gig image" class="table-image">
         </td>
         <td>{{ order.name }}</td>
-        <td>{{ order.order_date }}</td>
-        <td>{{ order.due_on }}</td>
-        <td>{{ order.total }}</td>
+        <td>{{ Timestamp().format(order.order_date, 'd / m / Y') }}</td>
+        <td>{{ Timestamp().format(order.due_on, 'd / m / Y') }}</td>
+        <td>{{ order.total + ' €' }}</td>
         <td>
           <a href="#" class="{{ order.status == 'active' ? 'status-disabled' : 'status' }}">Order again</a>
         </td>

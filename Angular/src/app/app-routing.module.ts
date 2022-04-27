@@ -7,7 +7,7 @@ import { BuyGigComponent } from "./buy-gig/buy-gig.component";
 const routes: Routes = [
   { path: 'my-orders', component: MyOrdersComponent },
   { path: 'my-gigs', component: MyGigsComponent },
-  { path: 'buy-gig', component: BuyGigComponent },
+  { path: 'buy-gig/:id', component: BuyGigComponent },
 ];
 
 @NgModule({

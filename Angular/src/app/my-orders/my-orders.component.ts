@@ -1,7 +1,6 @@
-import {Component, OnInit, ViewEncapsulation} from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable, throwError } from 'rxjs';
-import { catchError, retry } from 'rxjs/operators';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Order } from "../order.model";
+import { OrderService } from "../order.service";
 
 @Component({
   selector: 'app-my-orders',
@@ -11,22 +10,30 @@ import { catchError, retry } from 'rxjs/operators';
 })
 export class MyOrdersComponent implements OnInit {
 
-  orders : any[] = [];
+  orders: Order[] = [];
 
-  constructor(private http: HttpClient) {
-    this.orders = [];
+  constructor(
+    private orderService: OrderService,
+  ) {}
 
-    this.getOrders().subscribe( data => this.orders = data );
+  ngOnInit(): void {
+    this.getOrders();
   }
 
-  ngOnInit(): void {}
-
-  public getOrders(): Observable<any> {
-    return this.http.get("https://623af9f6f8827fbe47ac3209.mockapi.io/orders");
+  public getOrders(){
+    this.orderService.getList().subscribe(
+      (res: any) => this.orders = res as Order[]
+    );
   }
 
   filterStatus(status : any = false) {
-    this.getOrders().subscribe( data => this.orders = data.filter( (item: any) => status ? item.status == status : true ) );
+    this.orderService.getList().subscribe(
+      (res: any) => this.orders = res.map(
+        (item: any) => ({ ...item.data(), 'id': item.id})
+      ).filter(
+        (item: any) => status ? item.status == status : true
+      ) as Order[]
+    );
   }
 
 }
