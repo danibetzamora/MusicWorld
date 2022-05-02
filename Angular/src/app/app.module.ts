@@ -17,6 +17,10 @@ import { BuyGigRecommendedComponent } from './buy-gig-recommended/buy-gig-recomm
 import { BuyGigReviewsComponent } from './buy-gig-reviews/buy-gig-reviews.component';
 import { FooterComponent } from './footer/footer.component';
 import { BuyGigContactFormComponent } from './buy-gig-contact-form/buy-gig-contact-form.component';
+import { CreateGigComponent } from './create-gig/create-gig.component';
+import { MessagesComponent } from './messages/messages.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +34,10 @@ import { BuyGigContactFormComponent } from './buy-gig-contact-form/buy-gig-conta
     BuyGigReviewsComponent,
     FooterComponent,
     BuyGigContactFormComponent,
+    CreateGigComponent,
+    MessagesComponent,
+    LoginComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,

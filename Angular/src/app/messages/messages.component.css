@@ -1,0 +1,270 @@
+
+* {
+box-sizing: border-box;
+font-family: 'Poppins', sans-serif;
+overflow-x: hidden;
+}
+
+.content{
+    width: 95vw;
+    margin: auto;
+    margin-top: 40px;
+    height: 700px;
+    background-color: #fff;
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 3px;
+   
+}
+
+.main-content{
+    display: flex;
+    height: 100%;
+}
+
+.header > p {
+    
+    width:30%;
+    padding-left: 20px;
+    width: 320px;
+    width:26%;
+    line-height: 70px;
+    border-right: 1px solid rgb(211,211,211);
+    margin-right: 15px;
+}
+
+
+
+.content .header{
+    display: flex;
+    align-items: center;
+    height: 120px;
+    border-bottom: 1px solid rgb(211, 211, 211);
+    overflow: hidden;
+}
+
+
+.last-seen{
+    font-size: 11px;
+    color: rgb(156, 156, 156);
+}
+
+.chats{
+    /* margin-left: 20px; */
+    /* width: 29.58%; */
+    /* width: 320px; */
+    width: 26%;
+    height: 100%;
+    border-right: 1px solid rgb(211, 211, 211);
+
+
+
+}
+
+.chatsSS{
+    /* margin-left: 20px; */
+    /* width: 29.58%; */
+    /* width: 320px; */
+    width: 100%;
+    height: 100%;
+    border-right: 1px solid rgb(211, 211, 211);
+
+
+
+}
+
+.chat{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgb(211, 211, 211);
+    padding-left: 20px;
+}
+
+.chat img{
+    width: 50px;
+    height: 50px;
+}
+
+.chat-content{
+    margin-left: 15px;
+    margin-right: 50px;
+  
+}
+
+.username-chat{
+    color: #000;
+}
+.chat-content{
+    color: rgb(119, 119, 119);
+}
+
+.minutes-ago{
+    color: rgb(119, 119, 119);
+}
+
+.main-chat{
+    width: 50%;
+    height: 100%;
+    border-right: 1px solid rgb(211, 211, 211);
+    padding-top: 10px;
+  
+}
+
+.main-chatMS{
+    width: 74%;
+    height: 100%;
+    border-right: 1px solid rgb(211, 211, 211);
+    padding-top: 10px;
+  
+}
+
+.main-chatSS{
+    width: 100%;
+    height: 100%;
+    border-right: 1px solid rgb(211, 211, 211);
+    padding-top: 10px;
+  
+} 
+
+.message{
+    display: flex;
+    margin-bottom: 20px;
+}
+.message img{
+    width: 35px;
+    height: 35px;
+    margin-right: 15px;
+}
+.text{
+    max-width: 500px;
+    color: rgb(90, 90, 90);
+}
+
+.typing{
+    height: 12%;
+    border-top: 1px solid rgb(211, 211, 211);
+    position: relative;
+
+}
+
+.wrap{
+    height: 88%;
+    padding-left: 20px;
+}
+
+.new-message-input{
+width: 100%;
+border: none;
+outline: none;
+height: 50px;
+padding-left: 20px;
+}
+
+
+.send-btn{
+    position: absolute;
+    right: 2%;
+    top: 65%;
+    border: none;
+    background-color: #fff;
+    color: rgb(52, 182, 63);
+    font-size: 15px;
+}
+
+.more-info{
+    width: 24%;
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+}
+.orders{
+    margin-top: 30px;
+    display: flex;
+    font-size: 15px;
+    width: 90%;
+   
+ 
+
+}
+
+.orders p{
+    margin-right: 20px;
+}
+
+
+.separator{
+    width: 90%;
+    background-color: rgb(146, 146, 146);
+    height: 1px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+.client-info{
+    width: 90%;
+}
+
+.info-field{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.field{
+    color: rgb(119, 119, 119);
+}
+
+
+
+@media screen and (max-width: 60em){
+
+
+    .main-chat{
+        width: 74%;
+    }
+
+    .more-info{
+        display: none;
+    }
+ 
+
+
+
+
+
+}
+
+/*small size*/
+
+@media screen and (max-width: 40em){
+
+   
+    .header{
+        display: none !important;
+    }
+
+    .main-chat{
+        
+        display: none !important;
+    }
+    .chats{
+        width: 100%;
+    }
+
+    
+
+    
+
+
+    
+
+   
+
+
+
+
+
+}
+
