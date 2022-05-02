@@ -16,20 +16,20 @@
       <div class="display-flex">
         <div class="col-2-50" style="margin: 0 10%;">
           <div class="margin">
-            <a href="#">{{ gig.gig_category }}</a> <b>></b> <a href="#">{{ gig.gig_name }}</a>
+            <a href="#">{{ gig.gig_category }}</a> <b> > </b> <a href="#">{{ gig.name }}</a>
           </div>
 
           <div class="margin" id="overview">
-            <h2>{{ gig.gig_name }}</h2>
+            <h2>{{ gig.name }}</h2>
           </div>
 
           <div class="margin text-left">
             <img src="{{ gig.user_image }}" alt="" style="width: 32px; height: 32px; border-radius: 20px;">
-            <div style="display: inline-block;vertical-align: top;margin: 8px;">{{ gig.user_username }}</div>
+            <div style="display: inline-block;vertical-align: top;margin: 8px;">{{ gig.user_name }}</div>
           </div>
 
           <div class="margin">
-            <img src="{{ gig.gig_image }}" alt="Gig Main Image" style="width: 100%;">
+            <img src="{{ gig.image }}" alt="Gig Main Image" style="width: 100%;">
           </div>
 
           <div class="margin" id="description">
@@ -58,7 +58,7 @@
             <div class="margin text-left">
               <img src="{{ gig.user_image }}" alt="" style="width: 32px; height: 32px; border-radius: 20px;">
               <div class="display-inline-block margin" style="vertical-align: top; margin: 8px;">
-                {{ gig.user_username }}
+                {{ gig.user_name }}
               </div>
             </div>
           </div>

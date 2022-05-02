@@ -18,13 +18,15 @@
         <td class="table-image-wrapper">
           <img src="{{ gig.image }}" alt="Gig image" class="table-image">
         </td>
-        <td>{{ gig.name }}</td>
+        <td>
+          {{ gig.name }}
+        </td>
         <td>{{ gig.impressions }}</td>
         <td>{{ gig.clicks }}</td>
         <td>{{ gig.orders }}</td>
         <td>{{ gig.cancellations }}</td>
         <td>
-
+          <a [routerLink]="['/buy-gig', gig.id]" class="button">View</a>
         </td>
       </tr>
     </ng-container>

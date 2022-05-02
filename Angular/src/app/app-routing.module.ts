@@ -11,15 +11,11 @@ import { RegisterComponent } from './register/register.component';
 const routes: Routes = [
   { path: 'my-orders', component: MyOrdersComponent },
   { path: 'my-gigs', component: MyGigsComponent },
-  { path: 'buy-gig', component: BuyGigComponent },
+  { path: 'buy-gig/:id', component: BuyGigComponent },
   { path: 'create-gig', component: CreateGigComponent },
   { path: 'messages', component: MessagesComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-
-
-
-
 ];
 
 @NgModule({

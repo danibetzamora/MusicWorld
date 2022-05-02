@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import Timestamp from "../Timestamp";
 
 @Component({
   selector: 'my-orders-table',
@@ -12,5 +13,9 @@ export class MyOrdersTableComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void { }
+
+  public Timestamp(){
+    return Timestamp;
+  }
 
 }
