@@ -1,0 +1,140 @@
+nav{
+    font-family: 'ABeeZee';
+    width: 100vw;
+    min-height: 6em;
+    display: flex;
+    align-items: center;
+    justify-content: space-around; 
+    background-color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(121, 121, 121);
+}
+
+.main-title-class {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-title {
+    font-family: 'Piedra';
+    font-size: 3rem;
+    color: #211DBF;
+}
+
+.main-logo {
+    height: 5em;
+    width: 5em;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(206, 206, 206);
+    border-radius: 2px;
+    height: 2.5em;
+    width: 25%;
+}
+
+.Lupa-Search {
+    padding: 0.5em;
+}
+
+.search{
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+.search-btn{
+    background-color: #211DBF;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.search-btn button{
+    border: none;
+    background-color: #211DBF;
+    color: #fff;
+    font-size: 1.1rem;
+    width: 6em;
+    cursor: pointer;
+    padding: 0.5em;
+}
+
+.navigation {
+    width: 30em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigation a:hover{
+    color: #211DBF;
+    font-weight: bold;
+}
+
+.nav-user-logo {
+    margin-right: 2em;
+}
+
+.slide-menu {
+    display: none;
+    margin-right: 1.5em;
+    font-size: 2.5rem;
+}
+
+@media (max-width: 960px) {
+    nav {
+        justify-content: space-between;
+    }
+
+    .main-title-class {
+        justify-content: flex-start;
+        margin-left: 1em;
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    .nav-user-logo {
+        display: none;
+    }
+
+    .slide-menu {
+        display: block;
+    }
+}
+
+@media (max-width: 1328px) {
+    .main-title-class {
+        width: 20em;
+        margin-left: 0.5em;
+        justify-content: flex-start;
+    }
+
+    .main-title {
+        font-size: 2.5rem;
+    }
+    
+    .main-logo {
+        height: 4em;
+        width: 4em;
+    }
+
+    .search-container {
+        display: none;
+    }
+    
+    .navigation {
+        justify-content: center;
+        width: 35em;
+        gap: 2rem;
+    }
+}

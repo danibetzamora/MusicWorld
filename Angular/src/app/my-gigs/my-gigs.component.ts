@@ -6,7 +6,7 @@ import { ReviewService } from "../review.service";
 @Component({
   selector: 'app-my-gigs',
   templateUrl: './my-gigs.component.html',
-  styleUrls: ['./my-gigs.component.css'],
+  styleUrls: ['./my-gigs.component.css', '../buy-gig/buy-gig.component.css'],
   encapsulation: ViewEncapsulation.None
 })
 export class MyGigsComponent implements OnInit {

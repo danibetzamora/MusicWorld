@@ -20,7 +20,8 @@ import { BuyGigContactFormComponent } from './buy-gig-contact-form/buy-gig-conta
 import { CreateGigComponent } from './create-gig/create-gig.component';
 import { MessagesComponent } from './messages/messages.component';
 import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
+import { HeaderComponent } from './header/header.component';
+import { HomePageComponent } from './home-page/home-page.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { RegisterComponent } from './register/register.component';
     CreateGigComponent,
     MessagesComponent,
     LoginComponent,
-    RegisterComponent,
+    HeaderComponent,
+    HomePageComponent,
   ],
   imports: [
     BrowserModule,
