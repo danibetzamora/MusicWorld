@@ -40,6 +40,7 @@ submitLoginForm(): void{
     if(valid) {
         alert('¡Login successfully!');
         form.submit();
+        location.replace("/allGigs");
     } else {
         alert('You must fill in all fields and take into account the format of each one. (If you hover the mouse pointer over each one you can get more information about it).');
     } 

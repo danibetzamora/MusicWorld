@@ -22,6 +22,8 @@ import { MessagesComponent } from './messages/messages.component';
 import { LoginComponent } from './login/login.component';
 import { HeaderComponent } from './header/header.component';
 import { HomePageComponent } from './home-page/home-page.component';
+import { RegisterComponent } from './register/register.component';
+import { AllGigsComponent } from './all-gigs/all-gigs.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +42,8 @@ import { HomePageComponent } from './home-page/home-page.component';
     LoginComponent,
     HeaderComponent,
     HomePageComponent,
+    RegisterComponent,
+    AllGigsComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,7 +1,7 @@
 nav{
     font-family: 'ABeeZee';
     width: 100vw;
-    min-height: 6em;
+    min-height: 10em;
     display: flex;
     align-items: center;
     justify-content: space-around; 

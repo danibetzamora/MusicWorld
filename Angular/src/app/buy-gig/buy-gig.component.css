@@ -68,7 +68,7 @@
   }
   
   /* > 640 px */
-  @media screen and (min-width: 40em ) {
+  	@media screen and (min-width: 40em ) {
 	  .flexbox{
 		  display: flex;
 		  flex-direction: row;
@@ -139,23 +139,26 @@
 	  .display-flex-resp{
 		  display: flex;
 	  }
-  }
+  	}
   
-  a {
-	  text-decoration: none;
-	  color: rgb(121, 121, 121);
+	a {
+		text-decoration: none;
+		color: rgb(121, 121, 121);
 	}
 	
 	p{
-	  overflow-wrap: break-word;
-	  white-space: break-spaces;
-	}
+		overflow-wrap: break-word;
+		white-space: break-spaces;
+	  }
 	
-	*{
-	  padding: 0;
-	  margin: 0;
-	  box-sizing: border-box;
+	* {
+		/*
+		padding: 0;
+		margin: 0;
+		*/
+		box-sizing: border-box;
 	}
+
 	.social-logo{
 	  width: 32px;
 	}
