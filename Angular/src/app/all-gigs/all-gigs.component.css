@@ -45,7 +45,7 @@
     margin-right: auto;
     width: 90%;
     min-height: 65vh;
-    overflow: auto;
+    overflow: hidden;
 }
 
 .gig-inline-block {
@@ -198,34 +198,6 @@
     .filters-item {
         flex-shrink: 0.2;
     }
-/*
-    .gigs-container {
-        height: 210vh;
-        margin-top: 0;
-        margin-bottom: 0;
-        justify-content: center;
-        align-items: center;
-    }
-    .part-1 {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 4rem;
-        margin-right: 4em;
-    }
-
-    .part-2 {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 4rem;
-        margin-right: 4em;
-    }
-
-    .gig {
-        width: 18em;
-    }
-*/
 }
 
 @media (max-width: 1328px) {
@@ -247,22 +219,4 @@
         justify-content: center;
         gap: 2rem;
     }
-/*
-    .gigs-container {
-        flex-direction: column;
-        width: 100vw;
-        min-height: 110vh;
-        justify-content: space-around;
-    }
-
-    .part-1 {
-        width: 100vw;
-        height: 50vh;
-    }
-
-    .part-2 {
-        width: 100vw;
-        height: 50vh;
-    }
-*/
 }

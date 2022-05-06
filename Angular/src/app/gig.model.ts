@@ -1,6 +1,5 @@
 // @ts-nocheck
 export class Gig {
-
   id: string;
   name: string;
   impressions: number;
@@ -30,5 +29,4 @@ export class Gig {
   gig_reviews_4: number;
   gig_reviews_5: number;
   gig_reviews_all: number;
-
 }
