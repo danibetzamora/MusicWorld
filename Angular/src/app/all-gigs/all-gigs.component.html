@@ -48,18 +48,18 @@
                 <img src="{{gig.image}}" alt="Gig 1 Image" class="gig-image">
 
                 <div class="user-gig">
-                    <img src="../assets/images/all-gigs/gig1-profile.png" alt="Gig 1 Profile" class="gig-image-profile">
-                    <p class="user-gig-name">remonbeeftink</p>
+                    <img src="{{gig.user_image}}" alt="Gig 1 Profile" class="gig-image-profile">
+                    <p class="user-gig-name">{{gig.user_username}}</p>
                 </div>
 
                 <div class="gig-description">
-                    <p class="gig-description-p">I will write and produce you amazing music for all your projects</p>
+                    <p class="gig-description-p">{{gig.desc}}</p>
                 </div>
             
                 <div class="rating">
                     <img src="../assets/images/all-gigs/star.png" alt="Star">
-                    <p>4.9</p>
-                    <span>(85)</span>
+                    <p>{{gig.rating}}</p>
+                    <span>({{gig.impressions}})</span>
                 </div>
 
                 <div class="like-price">
@@ -68,7 +68,7 @@
                         <img src="../assets/images/all-gigs/heart-icon.png" alt="heart-icon">
                     </div>
 
-                    <p>€27</p>
+                    <p>€{{gig.price}}</p>
                 </div>
             </div>
         </div>    

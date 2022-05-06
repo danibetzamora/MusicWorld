@@ -9,6 +9,10 @@ export class Gig {
   cancellations: number;
   status: string;
   user_name: string;
+  user_username: string;
+  rating: number;
+  price: number;
+  my_gig: boolean;
   image: string;
   user_image: string;
   desc: string;

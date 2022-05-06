@@ -26,7 +26,9 @@ export class MyGigsComponent implements OnInit {
     this.gigService.getList().subscribe(
       (res: any) => this.gigs = res.map(
         (item: any) => ({ ...item.data(), 'id': item.id})
-      ) as Gig[]
+      ).filter(
+        (item: any) => item.my_gig == true
+      )as Gig[] 
     );
   }
 
