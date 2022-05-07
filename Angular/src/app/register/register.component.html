@@ -7,47 +7,46 @@
         </div>
 
         <div class="form">
-            <form name="register" id="register" method="get" action="">
+            <form [formGroup]="registerForm" (submit)="register()" name="register" id="register">
                 <div class="form-field">
                     <label for="name">* Name:</label>
-                    <input type="text" id="name" name="name" placeholder="Lukas" autocomplete="false" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð]{3,16}"
+                    <input type="text" id="name" formControlName="name" placeholder="Lukas" autocomplete="false" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð]{3,16}"
                     title="Name must be a single name, containing only upper and/or lower case (From 3 to 16 letters). It cannot contain numbers or symbols. e.g. Lukas" required>
                 </div>
-                
+
                 <div class="form-field">
-                    <label for="lastname">* Last Name:</label>
-                    <input type="text" id="lastname" name="lastname" placeholder="Zamora Mcgorrin" autocomplete="new-text" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,40}"
-                    title="Last name must contain at least one last name, in upper or lower case (2 to 40 letters). It cannot contain numbers or symbols. eg. Zamora Mcgorrin." required>
+                    <label for="surname">* Surname:</label>
+                    <input type="text" id="surname" formControlName="surname" placeholder="Zamora Mcgorrin" autocomplete="new-text" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,40}"
+                    title="Surname must contain at least one last name, in upper or lower case (2 to 40 letters). It cannot contain numbers or symbols. eg. Zamora Mcgorrin." required>
                 </div>
-                
+
                 <div class="form-field">
                     <label for="email">* Email:</label>
-                    <input type="email" id="email" name="email" placeholder="example@mail" autocomplete="new-text" 
+                    <input type="email" id="email" formControlName="email" placeholder="example@mail" autocomplete="new-text"
                     title="Email should correspond to the following format at least: example@mail" required>
                 </div>
-                
+
                 <div class="form-field">
                     <label for="address">Address:</label>
-                    <input type="text" id="address" name="address" placeholder="Avenue Escaleritas 16" autocomplete="new-text" pattern="^[A-z]+\s[A-z]+\s\d+"
+                    <input type="text" id="address" formControlName="address" placeholder="Avenue Escaleritas 16" autocomplete="new-text" pattern="^[A-z]+\s[A-z]+\s\d+"
                     title="Address must contain the type of road (Street, Avenue...), the name of the street (Escaleritas), and the street number (16). e.g. Avenue Escaleritas 16.">
                 </div>
-                
+
                 <div class="form-field">
                     <label for="password1">* Password:</label>
-                    <input type="password" id="password1" name="password1" placeholder="Password" autocomplete="new-text" pattern ="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                    <input type="password" id="password1" formControlName="password1" placeholder="Password" autocomplete="new-text" pattern ="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                     title="The password must contain at least 8 characters, a capital letter, and a number. (Letters and numbers only. Symbols are not allowed)." required>
                 </div>
-                
+
                 <div class="form-field">
                     <label for="password2">* Password:</label>
-                    <input type="password" id="password2" name="password2" placeholder="Repeat your password" autocomplete="new-text" pattern ="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+                    <input type="password" id="password2" formControlName="password2" placeholder="Repeat your password" autocomplete="new-text" pattern ="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
                 </div>
 
                 <div class="form-field-last">
-                    <input id="send" name="send" type="button"  class="submit-button" value="Register">
+                    <input id="send" name="send" type="submit"  class="submit-button" value="Register">
                 </div>
-            </form> 
+            </form>
         </div>
     </div>
-</div>   
-   
+</div>

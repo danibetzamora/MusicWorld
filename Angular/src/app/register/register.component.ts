@@ -3,6 +3,8 @@ import { Component, OnInit, ViewChild , AfterViewInit, ElementRef } from '@angul
 import { FormBuilder } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import $ from 'jquery';
+import {UserService} from "../user.service";
+import {User} from "../user.model";
 
 @Component({
   selector: 'app-register',
@@ -10,54 +12,58 @@ import $ from 'jquery';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-  loginForm = this.formBuilder.group({
-    name: "", lastname: "", email: "", address: "", password1: "", password2: ""
-});
 
-  submitLoginForm(): void{
-    let form = this.loginForm.value;
-    console.log(form);
-  }
+  registerForm = this.formBuilder.group({
+    name: "", surname: "", email: "", address: "", password1: "", password2: ""
+  });
 
-  constructor(private formBuilder : FormBuilder, private elementRef : ElementRef) { }
+  constructor(
+    private formBuilder : FormBuilder,
+    private elementRef : ElementRef,
+    private userService : UserService,
+  ) {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
 
+  register() {
+    let valid = (<HTMLInputElement>document.querySelector("form[name='register']")).checkValidity();
+    let password1 = <HTMLInputElement>document.getElementById('password1');
+    let password2 = <HTMLInputElement>document.getElementById('password2');
+
+    if(valid && password1.value == password2.value) {
+
+      let form = this.registerForm.value;
+
+      let user = {
+        email: form.email,
+        password: form.password1,
+        name: form.name,
+        surname: form.surname,
+        address: form.address,
+      } as User;
+
+      this.userService.create(user).then(
+        (res) => {
+          user.id = res.id;
+
+          localStorage.setItem('user', JSON.stringify(user));
+        }
+      );
+
+    } else if(password1.value != password2.value) {
+      alert('Passwords do not match');
+      password1.value = password2.value = "";
+      password1.style.background = password2.style.background = '#FFDDDD';
+    } else {
+      alert('You must fill in all fields and take into account the format of each one. (If you hover the mouse pointer over each one you can get more information about it).');
+    }
   }
 
   ngAfterViewInit(){
-
-    var button = this.elementRef.nativeElement.querySelector("#send");
-            button.addEventListener("click", this.sendit);
-            var form = this.elementRef.nativeElement.querySelector("form[name='register']");
-            form.addEventListener("invalid", this.validation, true);
-            form.addEventListener("input", this.checkval);
-        
+    var form = this.elementRef.nativeElement.querySelector("form[name='register']");
+    form.addEventListener("invalid", this.validation, true);
+    form.addEventListener("input", this.checkval);
   }
-
-  sendit(){
-    let form = $("form[name='register']");
-    var valid = (<HTMLInputElement>document.querySelector("form[name='register']")).checkValidity();
-    let password1 = <HTMLInputElement>document.getElementById('password1');
-    let password2 = <HTMLInputElement>document.getElementById('password2');
-  
-
-    if(valid && password1.value == password2.value) {
-        alert('¡Login successfully!');
-        form.submit();
-        location.replace("/login");
-    } else if(password1.value != password2.value) {
-      alert('Passwords do not match');
-      password1.value="";
-      password2.value="";
-      password1.style.background = '#FFDDDD';
-      password2.style.background = '#FFDDDD';
-    } else {
-        alert('You must fill in all fields and take into account the format of each one. (If you hover the mouse pointer over each one you can get more information about it).');
-    } 
-
-    
-  } 
 
   validation(e: any){
     var elem = e.target;
