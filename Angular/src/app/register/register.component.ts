@@ -5,6 +5,8 @@ import { RouterLink } from '@angular/router';
 import $ from 'jquery';
 import {UserService} from "../user.service";
 import {User} from "../user.model";
+import { Router } from '@angular/router';
+import * as sha512 from 'js-sha512';
 
 @Component({
   selector: 'app-register',
@@ -21,6 +23,7 @@ export class RegisterComponent implements OnInit {
     private formBuilder : FormBuilder,
     private elementRef : ElementRef,
     private userService : UserService,
+    private router : Router,
   ) {}
 
   ngOnInit(): void {}
@@ -36,7 +39,7 @@ export class RegisterComponent implements OnInit {
 
       let user = {
         email: form.email,
-        password: form.password1,
+        password: sha512.sha512(form.password1),
         name: form.name,
         surname: form.surname,
         address: form.address,
@@ -49,6 +52,8 @@ export class RegisterComponent implements OnInit {
           localStorage.setItem('user', JSON.stringify(user));
         }
       );
+
+      this.router.navigate(['/login']);
 
     } else if(password1.value != password2.value) {
       alert('Passwords do not match');
