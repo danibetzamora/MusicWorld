@@ -1,8 +1,8 @@
 import { Component, OnInit, ViewChild , AfterViewInit, ElementRef} from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import $ from 'jquery';
-import {UserService} from "../services/user.service";
-import {User} from "../services/user.model";
+import {UserService} from "../../services/user.service";
+import {User} from "../../services/user.model";
 import { Router } from '@angular/router';
 import * as sha512 from 'js-sha512';
 

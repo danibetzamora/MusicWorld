@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { Gig } from "../services/gig.model";
+import { Gig } from "../../services/gig.model";
 import { ActivatedRoute, ParamMap } from '@angular/router'
-import { GigService} from "../services/gig.service";
+import { GigService} from "../../services/gig.service";
 
 @Component({
   selector: 'app-all-gigs',

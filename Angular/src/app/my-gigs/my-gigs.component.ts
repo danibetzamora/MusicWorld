@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { Gig } from "../services/gig.model";
-import { GigService } from "../services/gig.service";
-import { ReviewService } from "../services/review.service";
+import { Gig } from "../../services/gig.model";
+import { GigService } from "../../services/gig.service";
+import { ReviewService } from "../../services/review.service";
 
 @Component({
   selector: 'app-my-gigs',
