@@ -57,10 +57,10 @@ submitLoginForm(): void{
     this.users.forEach( (user) => {
       if(user.email == email.value) {
         valid2 = true;
-      }
 
-      if(user.password == passwordHashed) {
-        valid3 = true;
+        if(user.password == passwordHashed) {
+          valid3 = true;
+        }
       }
     });
 
