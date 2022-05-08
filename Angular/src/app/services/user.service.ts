@@ -8,9 +8,9 @@ import {
   deleteDoc,
   updateDoc,
   docSnapshots,
-  query, where
+  query, where, collectionSnapshots
 } from '@angular/fire/firestore';
-import { User } from '../app/user.model';
+import { User } from './user.model';
 
 @Injectable({
   providedIn: 'root'
@@ -26,7 +26,7 @@ export class UserService {
   }
 
   getList() {
-    return collectionData( collection(this.firestore, this.collection) );
+    return collectionSnapshots( collection(this.firestore, this.collection) );
   }
 
   create(item: User) {

@@ -2,8 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'buy-gig-recommended',
-  templateUrl: './buy-gig-recommended.component.html',
-  styleUrls: ['./buy-gig-recommended.component.css']
+  templateUrl: './buy-gig-recommended.component.html'
 })
 export class BuyGigRecommendedComponent implements OnInit {
 

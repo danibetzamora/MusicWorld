@@ -12,27 +12,20 @@
     border: 1px solid rgb(211,211,211);
     border-radius: 3px;
     min-width: 650px;
-
 }
-
 
 .gigInfoIntroSS{
     width: 100%;
     margin-right: 10px;
-    
-    
     height: 550px;
     background-color: #fff;
     border: 1px solid rgb(211,211,211);
     border-radius: 3px;
-    
-
 }
 
 .howToGig{
     width: 250px;
     margin-left: 5px;
-    
     margin-top: 40px;
     height: 400px;
     background-color: #fff;
@@ -41,7 +34,6 @@
     min-width: 200px;
 
 }
-
 
 .howToGigTitle p{
     margin-left: 20px;
@@ -63,18 +55,15 @@
     font-size: 12px;
     margin-top: 5px;
     color: rgb(139, 130, 130);
-    
 }
 
 
 .titleIntro{
     display: flex;
-    
 }
 
 .titleIntroSS{
     display: flex;
-    
 }
 
 .titleIntro p{
@@ -86,6 +75,7 @@
     margin-top: 30px;
     margin-left: 30px;
 }
+
 .gigTitleType input{
     font-size: larger;
     margin-top: 30px;
@@ -113,19 +103,16 @@
 }
 .categoryIntroSS{
     display: flex;
-    
 }
 
 .categoryIntro p{
     margin-top: 30px;
     margin-left: 45px;
-
 }
 
 .categoryIntroSS p{
     margin-top: 30px;
     margin-left: 25px;
-
 }
 
 .gigCategoryType{
@@ -137,39 +124,29 @@
     margin-left: 19px;
 }
 .gigCategoryType input{
-    
-    
     margin-top: 30px;
     margin-left: 20px;
     width: 200px;
     height: 30px;
-    
     border: 1px solid rgb(211, 211, 211);
     border-radius: 5px;
 }
 
 .gigCategoryTypeSS input{
-    
-    
     margin-top: 30px;
     margin-left: 20px;
     width: 114px;
     height: 30px;
-    
     border: 1px solid rgb(211, 211, 211);
     border-radius: 5px;
 }
 
 .tagsIntro{
-    display: flex;
-    
+    display: flex; 
 }
 .tagsIntroSS{
-    display: flex;
-    
+    display: flex; 
 }
-
-
 
 .tagsIntro p{
     margin-top: 30px;
@@ -184,7 +161,6 @@
 
 }
 .gigTagsType input{
-    
     margin-top: 40px;
     margin-left: 20px;
     width: 450px;
@@ -194,7 +170,6 @@
 }
 
 .gigTagsTypeSS input{
-    
     margin-top: 40px;
     margin-left: 0px;
     width: 250px;
@@ -226,7 +201,6 @@
 
 }
 .gigDescType input{
-    
     margin-top: 40px;
     margin-left: 20px;
     width: 450px;
@@ -236,7 +210,6 @@
 }
 
 .gigDescTypeSS input{
-    
     margin-top: 40px;
     margin-left: 20px;
     width: 250px;
@@ -247,8 +220,6 @@
 
 
 .linksCreateGig a{
-    
-    
     border: none;
     background-color: #fff;
     color: rgb(22, 18, 236);
@@ -257,8 +228,6 @@
 
 
 .linksCreateGigSS a{
-    
-    
     border: none;
     background-color: #fff;
     color: rgb(22, 18, 236);
@@ -267,27 +236,19 @@
 
 .Gallery{
     margin-left: 500px;
-
 }
 
 .GallerySS{
     margin-left: 300px;
-
 }
 
 .LinkVideo{
     margin-left: 340px;
     display: none;
-
-
-
 }
 
 .LinkVideoSS{
     margin-left: 300px;
-
-
-
 }
 
 .createBtn{
@@ -310,9 +271,7 @@
     border-radius: 3px;
 }
 
-@media screen and (max-width: 60em){
-
-    
+@media screen and (max-width: 60em){ 
     .howToGig{
         display: none;
     }
@@ -320,18 +279,10 @@
     .LinkVideo{
         display: block;
     }
-
-
-
-
-
 }
 
 
 @media screen and (max-width: 40em){
-
-
-
     .gigInfoIntro{
         width: 100%;
         margin-left: default;

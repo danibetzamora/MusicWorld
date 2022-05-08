@@ -3,8 +3,7 @@ import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'buy-gig-contact-form',
-  templateUrl: './buy-gig-contact-form.component.html',
-  styleUrls: ['./buy-gig-contact-form.component.css']
+  templateUrl: './buy-gig-contact-form.component.html'
 })
 export class BuyGigContactFormComponent implements OnInit {
 

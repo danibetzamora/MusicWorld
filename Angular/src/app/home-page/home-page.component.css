@@ -74,6 +74,10 @@ nav a {
     font-weight: bold;
 }
 
+nav a:hover {
+    color: #fff;
+}
+
 .sponsors {
     display: flex;
     justify-content: space-around;

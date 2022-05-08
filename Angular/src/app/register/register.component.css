@@ -61,6 +61,11 @@ form {
     width: 100%;
 }
 
+.form-field-last input:hover {
+    color: #000;
+    cursor: pointer;
+}
+
 .submit-button {
     background-color: #211DBF;
     color: #FFFF;

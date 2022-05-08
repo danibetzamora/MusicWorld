@@ -6,7 +6,6 @@
     overflow-x: hidden;
 }
 
-
 body{
     background-color: rgb(243, 243, 243);
     min-height: 100vh;
@@ -79,6 +78,11 @@ form {
     align-items: center;
 }
 
+.login-button button:hover {
+    color: #000;
+    cursor: pointer;
+}
+
 .login-button button {
     width: 100%;
     height: 70%;
@@ -98,12 +102,19 @@ form {
 
 .links{
     display: block;
-
-
 }
 
 .links a {
     display: block;
+}
+
+.links a:visited {
+    text-decoration: none;
+    color: #211DBF;
+}
+
+.links a:hover {
+    color: #000;
 }
 
 .checkbox {

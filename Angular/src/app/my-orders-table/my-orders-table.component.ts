@@ -3,9 +3,9 @@ import Timestamp from "../Timestamp";
 
 @Component({
   selector: 'my-orders-table',
-  templateUrl: './my-orders-table.component.html',
-  styleUrls: ['./my-orders-table.component.css']
+  templateUrl: './my-orders-table.component.html'
 })
+
 export class MyOrdersTableComponent implements OnInit {
 
   @Input() orders : any[] = [];

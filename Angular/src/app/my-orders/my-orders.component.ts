@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { Order } from "../order.model";
-import { OrderService } from "../order.service";
+import { Order } from "../services/order.model";
+import { OrderService } from "../services/order.service";
 
 @Component({
   selector: 'app-my-orders',

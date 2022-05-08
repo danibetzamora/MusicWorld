@@ -3,8 +3,8 @@ import { Component, OnInit, ViewChild , AfterViewInit, ElementRef } from '@angul
 import { FormBuilder } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import $ from 'jquery';
-import {UserService} from "../user.service";
-import {User} from "../user.model";
+import {UserService} from "../services/user.service";
+import {User} from "../services/user.model";
 import { Router } from '@angular/router';
 import * as sha512 from 'js-sha512';
 

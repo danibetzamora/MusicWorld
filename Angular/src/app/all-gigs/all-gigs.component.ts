@@ -1,13 +1,14 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { Gig } from "../gig.model";
+import { Gig } from "../services/gig.model";
 import { ActivatedRoute, ParamMap } from '@angular/router'
-import { GigService} from "../gig.service";
+import { GigService} from "../services/gig.service";
 
 @Component({
   selector: 'app-all-gigs',
   templateUrl: './all-gigs.component.html',
   styleUrls: ['./all-gigs.component.css']
 })
+
 export class AllGigsComponent implements OnInit {
 
   gigs: Gig[] = [];
@@ -27,6 +28,7 @@ export class AllGigsComponent implements OnInit {
       ) as Gig[]
     );
   }
+
 /*
   public getGigs() {
     this.gigService.getList().subscribe(
