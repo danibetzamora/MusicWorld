@@ -1,0 +1,118 @@
+.main-container {
+    font-family: 'ABeeZee';
+    width: 100vw;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #EEEE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 50vw;
+    height: 90vh;
+    background-color: #FFFF;
+    color: black;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container h1{
+    font-family: 'Piedra';
+    font-size: 3rem;
+    color: #211DBF;
+}
+
+.form {
+    width: 50%;
+}
+
+form {
+    margin: 12%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10%;
+}
+
+.form-field {
+    height: 20%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-field input{
+    width: 60%;
+    height: 2em;
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 5px;
+}
+
+.form-field-last {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.form-field-last input:hover {
+    color: #000;
+    cursor: pointer;
+}
+
+.submit-button {
+    background-color: #211DBF;
+    color: #FFFF;
+    border: #0000;
+    border-radius: 5px;
+    width: 35%;
+    height: 2.5em;
+}
+
+@media (max-width:1400px) {
+    .container {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .container h1{
+        font-size: 2.5rem;
+    }
+
+    .container h3 {
+        font-size: 1rem;
+        padding: 2%;
+    }
+
+    .form {
+        width: 70%;
+        display: flex;
+        justify-content: center;
+    }
+
+    form {
+        width: 100%;
+        margin: 0;
+        margin-top: 7%;
+        padding: 2%;
+        align-items: center;
+        border: 2px solid rgb(211, 211, 211);
+        border-radius: 7px;
+    }
+
+    .form-field {
+        width: 60%;
+    }
+}
+
+@media (max-width:860px) {
+    .form-field {
+        width: 100%;
+    }
+}

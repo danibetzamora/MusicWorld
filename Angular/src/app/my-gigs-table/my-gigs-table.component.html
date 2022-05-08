@@ -1,0 +1,44 @@
+<div class="margin responsive-table">
+  <table class="gigs-table">
+    <thead>
+    <tr>
+      <th>Gig</th>
+      <th></th>
+      <th>Impressions</th>
+      <th>Clicks</th>
+      <th>Orders</th>
+      <th>Cancellations</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody id="table-body">
+
+    <ng-container *ngIf="gigs.length > 0; else noData">
+      <tr *ngFor="let gig of gigs">
+        <td class="table-image-wrapper">
+          <img src="{{ gig.image }}" alt="Gig image" class="table-image">
+        </td>
+        <td>
+          {{ gig.name }}
+        </td>
+        <td>{{ gig.impressions }}</td>
+        <td>{{ gig.clicks }}</td>
+        <td>{{ gig.orders }}</td>
+        <td >{{ gig.cancellations }}</td>
+        <td>
+          <a [routerLink]="['/buy-gig', gig.id]" class="button">View</a>
+        </td>
+      </tr>
+    </ng-container>
+
+    <ng-template #noData>
+      <tr style="text-align: center;">
+        <td colspan="7">
+          There is currently no data in this table.
+        </td>
+      </tr>
+    </ng-template>
+
+    </tbody>
+  </table>
+</div>

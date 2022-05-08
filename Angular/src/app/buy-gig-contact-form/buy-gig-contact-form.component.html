@@ -1,0 +1,29 @@
+<div id="contact-form" class="col-2-30 contact-gig fixed-resp" style="top: 110px;right: 5%;">
+  <div class="gig-contact-form">
+    <div class="">
+      <form [formGroup]="contactForm" (submit)="submitContactForm()">
+        <div>
+          <h4>Contact form</h4>
+        </div>
+        <div>
+          <p>Contact the owner to get more information about the gig.</p>
+        </div>
+        <div>
+          <label for="email" class="form-label">Email</label><br>
+          <input formControlName="email" type="email" name="email" id="email">
+        </div>
+        <div>ľ
+          <label for="phone" class="form-label">Phone no.</label><br>
+          <input formControlName="phone" type="text" name="phone" id="phone">
+        </div>
+        <div>
+          <label for="message" class="form-label">Message</label><br>
+          <textarea formControlName="message" name="message" id="message"></textarea>
+        </div>
+        <div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

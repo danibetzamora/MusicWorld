@@ -1,0 +1,87 @@
+<app-header></app-header>
+
+<div class="main-container">
+    <div class="title-filters">
+        <h1>Results for "Music Production"</h1>
+
+        <div class="filters">
+            <ul class="filters-list">
+                <li class="filters-item">
+                    <span>Category</span>
+                    <img src="../assets/images/all-gigs/selector-icon.png" alt="Selector Icon" class="selector-icon">
+                </li>
+
+                <li class="filters-item">
+                    <span>Service Options</span>
+                    <img src="../assets/images/all-gigs/selector-icon.png" alt="Selector Icon" class="selector-icon">
+                </li>
+
+                <li class="filters-item">
+                    <span>Seller Details</span>
+                    <img src="../assets/images/all-gigs/selector-icon.png" alt="Selector Icon" class="selector-icon">
+                </li>
+
+                <li class="filters-item">
+                    <span>Price </span>
+                    <img src="../assets/images/all-gigs/selector-icon.png" alt="Selector Icon" class="selector-icon">
+                </li>
+
+                <li class="filters-item">
+                    <span>Delivery Time</span>
+                    <img src="../assets/images/all-gigs/selector-icon.png" alt="Selector Icon" class="selector-icon">
+                </li>
+            </ul>
+        </div>
+
+        <div class="sort">
+            <p>35,323 services available</p>
+
+            <p>Sort by <span>Relevance</span><span><img src="../assets/images/all-gigs/selector-icon.png" alt="Selector Icon"></span></p>
+        </div>
+    </div>  
+
+    <div class="gigs-container">
+
+        <div class="gig-inline-block" *ngFor="let gig of gigs" >
+            <div class="gig">
+                <img src="{{gig.image}}" alt="Gig 1 Image" class="gig-image">
+
+                <div class="user-gig">
+                    <img src="{{gig.user_image}}" alt="Gig 1 Profile" class="gig-image-profile">
+                    <p class="user-gig-name">{{gig.user_username}}</p>
+                </div>
+
+                <div class="gig-description">
+                    <p class="gig-description-p">{{gig.desc}}</p>
+                </div>
+            
+                <div class="rating">
+                    <img src="../assets/images/all-gigs/star.png" alt="Star">
+                    <p>{{gig.rating}}</p>
+                    <span>({{gig.impressions}})</span>
+                </div>
+
+                <div class="like-price">
+                    <div class="heart-option">
+                        <img src="../assets/images/all-gigs/options-icon.png" alt="options-icon">
+                        <img src="../assets/images/all-gigs/heart-icon.png" alt="heart-icon">
+                    </div>
+
+                    <p>€{{gig.price}}</p>
+                </div>
+            </div>
+        </div>    
+
+    </div>
+
+    <div class="pages">
+        <p class="unique-color">1</p>
+        <p>2</p>
+        <p>3</p>
+        <p>4</p>
+        <p>5</p>
+        <p>6</p>
+        <p>7</p>
+        <p><img src="../assets/images/all-gigs/right-icon.png" alt=""></p>
+    </div>
+</div>

@@ -1,0 +1,222 @@
+.main-container {
+    margin: 1.5em;
+    min-height: 90vh;
+}
+
+.main-container h1 {
+    font-size: 1.7em;
+    font-weight: 500;
+    margin-top: 1em;
+}
+
+.filters-list {
+    display: flex;
+    padding: 0;
+    gap: 1rem;
+    list-style: none;
+}
+
+.filters-item {
+    border: 1px solid rgb(121, 121, 121);
+    padding: 0.2em;
+    flex-shrink: 1;
+    flex-grow: 0;
+    flex-basis: 1;
+}
+
+.selector-icon {
+    margin-left: 0.4em;
+}
+
+.sort {
+    display: flex;
+    justify-content: space-between;
+    color: rgb(121, 121, 121);
+}
+
+.sort span {
+    color: black;
+    font-weight: 900;
+    margin-left: 0.5em;
+}
+
+.gigs-container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    min-height: 65vh;
+    overflow: hidden;
+}
+
+.gig-inline-block {
+    display: inline-block;
+    width: 20em;
+    height: 32em;
+    margin: 2.5em;
+}
+
+.gig {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid rgb(121, 121, 121);
+    width: 20em;
+    height: 32em;
+}
+
+.gig-image {
+    height: 12em;
+    width: 100%;
+}
+
+.user-gig {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.user-gig > * {
+    padding: 0.4em;
+}
+
+.gig-description {
+    width: 90%;
+    height: 4em;
+    margin: 0;
+}
+
+.gig-description-p {
+    margin: 0;
+    padding-left: 0.5em;
+}
+
+.rating {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 0;
+    width: 100%;
+    gap: 0.3em;
+    color: #FFBE5B;
+}
+
+.rating img {
+    padding-left: 0.5em;
+}
+
+.rating span {
+    color: rgb(121, 121, 121);
+}
+
+.rating p, span {
+    width: 10%;
+    height: 20%;
+    margin: 0;
+    padding-bottom: 0.7em;
+}
+
+.like-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-top: 1px solid rgb(121, 121, 121);
+}
+
+.like-price > * {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.heart-option > * {
+    padding-left: 0.5em;
+}
+
+.pages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.7rem;
+}
+
+.unique-color {
+    background-color: rgba(121, 121, 121, 0.582);
+}
+
+.pages p {
+    text-align: center;
+    padding: 0.3em;
+    border: 1px solid rgb(121, 121, 121);
+    width: 1.5em;
+    height: 1.5em;
+}
+
+@media (max-width: 960px) {
+    nav {
+        justify-content: space-between;
+    }
+
+    .main-title-class {
+        justify-content: flex-start;
+    }
+
+    .search-container {
+        display: none;
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    .nav-user-logo {
+        display: none;
+    }
+
+    .slide-menu {
+        display: block;
+    }
+
+    .categories {
+        justify-content: space-between;
+    }
+
+    .categories-div {
+        margin-right: 0.6em;
+        text-align: center;
+    }
+
+    .main-container h1 {
+        text-align: center;
+    }
+
+    .filters-list {
+        justify-content: space-between;
+        gap: 0.5em;
+        flex-shrink: 1;
+    }
+
+    .filters-item {
+        flex-shrink: 0.2;
+    }
+}
+
+@media (max-width: 1328px) {
+    .main-title-class {
+        width: 18em;
+        margin-left: 1em;
+        justify-content: flex-start;
+    }
+    .main-title {
+        font-size: 2rem;
+    }
+    
+    .main-logo {
+        height: 3.5em;
+        width: 3.5em;
+    }
+    
+    .navigation {
+        justify-content: center;
+        gap: 2rem;
+    }
+}

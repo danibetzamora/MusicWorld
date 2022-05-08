@@ -1,0 +1,40 @@
+<div class="margin responsive-table">
+  <table class="gigs-table">
+    <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th style="width: 13%;">Order Date</th>
+      <th style="width: 13%;">Due on</th>
+      <th style="width: 13%;">Total</th>
+      <th style="width: 13%;">Status</th>
+    </tr>
+    </thead>
+    <tbody id="table-body">
+
+    <ng-container *ngIf="orders.length > 0; else noData">
+      <tr *ngFor="let order of orders">
+        <td class="table-image-wrapper">
+          <img src="{{ order.image }}" alt="Gig image" class="table-image">
+        </td>
+        <td>{{ order.name }}</td>
+        <td>{{ Timestamp().format(order.order_date, 'd / m / Y') }}</td>
+        <td>{{ Timestamp().format(order.due_on, 'd / m / Y') }}</td>
+        <td>{{ order.total + ' €' }}</td>
+        <td>
+          <a href="#" class="{{ order.status == 'active' ? 'status-disabled' : 'status' }}">Order again</a>
+        </td>
+      </tr>
+    </ng-container>
+
+    <ng-template #noData>
+      <tr style="text-align: center;">
+        <td colspan="6">
+          There is currently no data in this table.
+        </td>
+      </tr>
+    </ng-template>
+
+    </tbody>
+  </table>
+</div>

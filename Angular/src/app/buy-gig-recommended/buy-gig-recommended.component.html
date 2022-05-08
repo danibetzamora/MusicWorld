@@ -1,0 +1,20 @@
+<div class="margin recommended">
+  <div class="" style="margin-left: 20px; vertical-align: top;">
+    <h3>Recommended for you</h3>
+  </div>
+
+  <div *ngFor="let gig of recommended" class="gig-item col-50">
+    <div>
+      <img src="{{ gig.image }}" alt="Gig image" style="width: 100%;">
+    </div>
+
+    <div>
+      <img src="{{ gig.user_image }}" alt="" style="width: 32px; height: 32px; border-radius: 20px;">
+      <div style="display: inline-block;vertical-align: top;margin: 8px;">{{ gig.user_name }}</div>
+    </div>
+
+    <div>
+      <p>{{ gig.desc }}</p>
+    </div>
+  </div>
+</div>

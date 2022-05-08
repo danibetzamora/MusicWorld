@@ -1,0 +1,42 @@
+<body>
+    <div class="signFrame">
+        <div class="signInTitle">
+            Sign In To Music World
+        </div>
+        
+        <div class="signType">
+            <form  name="login" id="login" [formGroup]="loginForm" (submit)="sendit()">
+                <div class="login-field">
+                    <label for="email">Email</label>
+                    <input formControlName= "email" type="email" id="email" name="email" placeholder="example@mail.com" autocomplete="off" 
+                    title="Email should correspond to the following format at least: example@mail.com" required>
+                </div>
+            
+                <div class="login-field">
+                    <label for="password">Password</label>
+                    <input formControlName= "password" type="password" id="password" name="password" placeholder="Password" autocomplete="off" pattern ="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                    title="The password must contain at least 8 characters, a capital letter, and a number. (Letters and numbers only. Symbols are not allowed)." required>
+                </div>
+
+                <div class="login-button">
+                    <button id="loginButton" name="loginButton" type="submit"  class="submit-button" value="Login"> Login </button>
+                </div>
+            
+                <div class="linkSign">
+                    <div class="checkbox">
+                        <input type="checkbox" name="rememeberMe" id="">
+                        <p>Remember me</p>
+                    </div>
+                    
+                    <div class="links">
+                        <a routerLink="#">Forgot Password</a>
+                        <a routerLink="/register">Create account</a>
+
+
+                    </div>
+                    
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
